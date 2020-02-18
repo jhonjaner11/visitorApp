@@ -12,6 +12,8 @@ namespace visitorApp
 {
     public partial class v_home_ce : Form
     {
+
+        Database miDB = new Database();
         public v_home_ce()
         {
             InitializeComponent();
@@ -110,6 +112,39 @@ namespace visitorApp
         {
             pnl_visita.Visible = false;
             pnl_incidente.Visible = true;
+        }
+
+        private void v_home_ce_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string id = txt_numero.Text;
+            string tp_id = comboBox_id.Text;
+            string nombre = txt_nombre.Text;
+            string apto = txt_apto.Text;
+            string vh = comboBox_tp_Vh.Text;
+            string placa = txt_placa.Text;
+            string fecha = txt_fecha_v.Text;
+            string path_foto = "/path";
+
+            string[] arrVisita = {id, tp_id, nombre, apto, vh,placa, fecha, path_foto};
+            miDB.OpenConnection();
+            Console.WriteLine("entrea");
+            Boolean resultado = miDB.InsertVisita(arrVisita);
+
+            Console.WriteLine(resultado);
+            miDB.CloseConnection();
+            Console.WriteLine("ddbb close insert visita");
+
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

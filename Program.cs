@@ -16,7 +16,7 @@ namespace visitorApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new v_home_ce());
+            Application.Run(new Login());
         }
     }
 }
