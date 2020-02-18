@@ -35,14 +35,13 @@
             this.pnl_visita = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.img_persona = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_apto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_fecha_v = new System.Windows.Forms.TextBox();
             this.comboBox_id = new System.Windows.Forms.ComboBox();
-            this.txt_numero = new System.Windows.Forms.TextBox();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.pnl_vehiculo = new System.Windows.Forms.Panel();
             this.txt_placa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.checkBox_vehiculo = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_incidente = new System.Windows.Forms.Panel();
@@ -61,9 +59,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pnl_v_home_ce = new System.Windows.Forms.Panel();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnl_visita.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_persona)).BeginInit();
             this.pnl_vehiculo.SuspendLayout();
             this.pnl_incidente.SuspendLayout();
             this.pnl_v_home_ce.SuspendLayout();
@@ -115,20 +117,22 @@
             // 
             this.pnl_visita.AutoSize = true;
             this.pnl_visita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_visita.Controls.Add(this.txt_telefono);
+            this.pnl_visita.Controls.Add(this.label12);
+            this.pnl_visita.Controls.Add(this.txt_nombre);
+            this.pnl_visita.Controls.Add(this.label5);
             this.pnl_visita.Controls.Add(this.label1);
             this.pnl_visita.Controls.Add(this.button2);
-            this.pnl_visita.Controls.Add(this.pictureBox1);
+            this.pnl_visita.Controls.Add(this.img_persona);
             this.pnl_visita.Controls.Add(this.button1);
             this.pnl_visita.Controls.Add(this.txt_apto);
             this.pnl_visita.Controls.Add(this.label8);
             this.pnl_visita.Controls.Add(this.txt_fecha_v);
             this.pnl_visita.Controls.Add(this.comboBox_id);
-            this.pnl_visita.Controls.Add(this.txt_numero);
-            this.pnl_visita.Controls.Add(this.txt_nombre);
+            this.pnl_visita.Controls.Add(this.txt_id);
             this.pnl_visita.Controls.Add(this.pnl_vehiculo);
             this.pnl_visita.Controls.Add(this.checkBox_vehiculo);
             this.pnl_visita.Controls.Add(this.label4);
-            this.pnl_visita.Controls.Add(this.label5);
             this.pnl_visita.Controls.Add(this.label3);
             this.pnl_visita.Controls.Add(this.label2);
             this.pnl_visita.Location = new System.Drawing.Point(102, 9);
@@ -158,13 +162,13 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox1
+            // img_persona
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(297, 146);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 110);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.img_persona.Location = new System.Drawing.Point(297, 146);
+            this.img_persona.Name = "img_persona";
+            this.img_persona.Size = new System.Drawing.Size(108, 110);
+            this.img_persona.TabIndex = 15;
+            this.img_persona.TabStop = false;
             // 
             // button1
             // 
@@ -178,16 +182,16 @@
             // 
             // txt_apto
             // 
-            this.txt_apto.Location = new System.Drawing.Point(21, 175);
+            this.txt_apto.Location = new System.Drawing.Point(21, 230);
             this.txt_apto.Name = "txt_apto";
-            this.txt_apto.Size = new System.Drawing.Size(140, 20);
+            this.txt_apto.Size = new System.Drawing.Size(95, 20);
             this.txt_apto.TabIndex = 13;
             this.txt_apto.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 159);
+            this.label8.Location = new System.Drawing.Point(18, 214);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 12;
@@ -209,25 +213,20 @@
             "T. I.",
             "Pasaporte",
             "Cedula Extranjera"});
-            this.comboBox_id.Location = new System.Drawing.Point(192, 134);
+            this.comboBox_id.Location = new System.Drawing.Point(192, 86);
             this.comboBox_id.Name = "comboBox_id";
             this.comboBox_id.Size = new System.Drawing.Size(74, 21);
             this.comboBox_id.TabIndex = 10;
             // 
-            // txt_numero
+            // txt_id
             // 
-            this.txt_numero.Location = new System.Drawing.Point(21, 134);
-            this.txt_numero.Name = "txt_numero";
-            this.txt_numero.Size = new System.Drawing.Size(165, 20);
-            this.txt_numero.TabIndex = 9;
-            this.txt_numero.TextChanged += new System.EventHandler(this.txt_numero_TextChanged);
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Location = new System.Drawing.Point(21, 86);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(245, 20);
-            this.txt_nombre.TabIndex = 8;
+            this.txt_id.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_id.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_id.Location = new System.Drawing.Point(21, 86);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(165, 20);
+            this.txt_id.TabIndex = 9;
+            this.txt_id.TextChanged += new System.EventHandler(this.txt_numero_TextChanged);
             // 
             // pnl_vehiculo
             // 
@@ -235,9 +234,9 @@
             this.pnl_vehiculo.Controls.Add(this.label7);
             this.pnl_vehiculo.Controls.Add(this.comboBox_tp_Vh);
             this.pnl_vehiculo.Controls.Add(this.label6);
-            this.pnl_vehiculo.Location = new System.Drawing.Point(21, 214);
+            this.pnl_vehiculo.Location = new System.Drawing.Point(132, 211);
             this.pnl_vehiculo.Name = "pnl_vehiculo";
-            this.pnl_vehiculo.Size = new System.Drawing.Size(208, 63);
+            this.pnl_vehiculo.Size = new System.Drawing.Size(159, 63);
             this.pnl_vehiculo.TabIndex = 7;
             this.pnl_vehiculo.Visible = false;
             // 
@@ -282,7 +281,7 @@
             // checkBox_vehiculo
             // 
             this.checkBox_vehiculo.AutoSize = true;
-            this.checkBox_vehiculo.Location = new System.Drawing.Point(178, 175);
+            this.checkBox_vehiculo.Location = new System.Drawing.Point(179, 175);
             this.checkBox_vehiculo.Name = "checkBox_vehiculo";
             this.checkBox_vehiculo.Size = new System.Drawing.Size(67, 17);
             this.checkBox_vehiculo.TabIndex = 6;
@@ -300,20 +299,10 @@
             this.label4.Text = "Fecha:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Nombre:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 118);
+            this.label3.Location = new System.Drawing.Point(18, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 2;
@@ -323,7 +312,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 118);
+            this.label2.Location = new System.Drawing.Point(184, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 1;
@@ -408,6 +397,38 @@
             this.pnl_v_home_ce.Size = new System.Drawing.Size(567, 328);
             this.pnl_v_home_ce.TabIndex = 3;
             // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(21, 133);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(245, 20);
+            this.txt_nombre.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Nombre:";
+            // 
+            // txt_telefono
+            // 
+            this.txt_telefono.Location = new System.Drawing.Point(22, 175);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(136, 20);
+            this.txt_telefono.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(19, 159);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 13);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Telefono:";
+            // 
             // v_home_ce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,7 +444,7 @@
             this.panel1.ResumeLayout(false);
             this.pnl_visita.ResumeLayout(false);
             this.pnl_visita.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_persona)).EndInit();
             this.pnl_vehiculo.ResumeLayout(false);
             this.pnl_vehiculo.PerformLayout();
             this.pnl_incidente.ResumeLayout(false);
@@ -445,7 +466,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox_vehiculo;
         private System.Windows.Forms.Panel pnl_vehiculo;
@@ -453,15 +473,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox_tp_Vh;
         private System.Windows.Forms.ComboBox comboBox_id;
-        private System.Windows.Forms.TextBox txt_numero;
-        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.TextBox txt_placa;
         private System.Windows.Forms.TextBox txt_apto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_fecha_v;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox img_persona;
         private System.Windows.Forms.Panel pnl_incidente;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button3;
@@ -470,5 +489,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel pnl_v_home_ce;
+        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_telefono;
+        private System.Windows.Forms.Label label12;
     }
 }

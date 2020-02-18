@@ -31,20 +31,22 @@ namespace visitorApp
             string pw = txt_contraseña.Text;
 
 
-            miDB.OpenConnection();
+            //miDB.OpenConnection();
             string usuario = miDB.SelectUser(us, pw);
             //sql.Parameters.AddWithValue("@login", us);
             //sql.Parameters.AddWithValue("@pw", pw);
             Console.WriteLine(usuario);
-            miDB.CloseConnection();
+            //miDB.CloseConnection();
             Console.WriteLine("ddbb close autocompletarNombreProd");
 
-            if (usuario=="admin")
+            if (usuario == "admin")
             {
-               Form frm = new v_home_ce();
                 this.Hide();
-                frm.Show();
-                
+                Form frm = new v_home_ce();
+                frm.ShowDialog();
+                this.Show();
+
+
             }
 
         }

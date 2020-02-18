@@ -17,7 +17,32 @@ namespace visitorApp
         public v_home_ce()
         {
             InitializeComponent();
+            autoLlenarId(txt_id);
            
+        }
+
+        public void autoLlenarId(TextBox cajaTexto)
+        {
+         
+
+            foreach (string color in miDB.GetPersonas())
+            {
+                Console.WriteLine(color);
+                cajaTexto.AutoCompleteCustomSource.Add(color);
+            }
+
+        }
+
+        public void autoLlenarPersona(string id, TextBox cjNombre, ComboBox cjTipoId, TextBox cjTelefono, PictureBox cjPathFoto)
+        {
+            
+            string[] res = miDB.GetOnlyPersona(id);
+            Console.WriteLine(res);
+            cjNombre.Text = res[0];
+            cjTipoId.Text = res[1];
+            cjTelefono.Text = res[2];
+            //cjPathFoto.Text = res[3];
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,7 +94,7 @@ namespace visitorApp
 
         private void txt_numero_TextChanged(object sender, EventArgs e)
         {
-
+            autoLlenarPersona(txt_id.Text, txt_nombre, comboBox_id, txt_telefono, img_persona);
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -121,7 +146,7 @@ namespace visitorApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string id = txt_numero.Text;
+            string id = txt_id.Text;
             string tp_id = comboBox_id.Text;
             string nombre = txt_nombre.Text;
             string apto = txt_apto.Text;
@@ -129,8 +154,9 @@ namespace visitorApp
             string placa = txt_placa.Text;
             string fecha = txt_fecha_v.Text;
             string path_foto = "/path";
+            string telefono = txt_telefono.Text;
 
-            string[] arrVisita = {id, tp_id, nombre, apto, vh,placa, fecha, path_foto};
+            string[] arrVisita = {id, tp_id, nombre, apto, vh,placa, fecha, path_foto, telefono};
             miDB.OpenConnection();
             Console.WriteLine("entrea");
             Boolean resultado = miDB.InsertVisita(arrVisita);
