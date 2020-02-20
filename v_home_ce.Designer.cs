@@ -40,8 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.img_persona = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pbFotoUser = new System.Windows.Forms.PictureBox();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.txt_apto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_fecha_v = new System.Windows.Forms.TextBox();
@@ -65,6 +65,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pnl_v_home_ce = new System.Windows.Forms.Panel();
             this.pnl_bbdd = new System.Windows.Forms.Panel();
+            this.btn_export = new System.Windows.Forms.Button();
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dt = new System.Windows.Forms.DataGridView();
@@ -78,9 +79,11 @@
             this.btn_mostrar_visitas = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.cboDispositivos = new System.Windows.Forms.ComboBox();
+            this.btn_cam = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnl_visita.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_persona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).BeginInit();
             this.pnl_vehiculo.SuspendLayout();
             this.pnl_incidente.SuspendLayout();
             this.pnl_v_home_ce.SuspendLayout();
@@ -146,14 +149,16 @@
             // 
             this.pnl_visita.AutoSize = true;
             this.pnl_visita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_visita.Controls.Add(this.btn_cam);
+            this.pnl_visita.Controls.Add(this.cboDispositivos);
             this.pnl_visita.Controls.Add(this.txt_telefono);
             this.pnl_visita.Controls.Add(this.label12);
             this.pnl_visita.Controls.Add(this.txt_nombre);
             this.pnl_visita.Controls.Add(this.label5);
             this.pnl_visita.Controls.Add(this.label1);
             this.pnl_visita.Controls.Add(this.button2);
-            this.pnl_visita.Controls.Add(this.img_persona);
-            this.pnl_visita.Controls.Add(this.button1);
+            this.pnl_visita.Controls.Add(this.pbFotoUser);
+            this.pnl_visita.Controls.Add(this.btnIniciar);
             this.pnl_visita.Controls.Add(this.txt_apto);
             this.pnl_visita.Controls.Add(this.label8);
             this.pnl_visita.Controls.Add(this.txt_fecha_v);
@@ -223,23 +228,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // img_persona
+            // pbFotoUser
             // 
-            this.img_persona.Location = new System.Drawing.Point(297, 146);
-            this.img_persona.Name = "img_persona";
-            this.img_persona.Size = new System.Drawing.Size(108, 110);
-            this.img_persona.TabIndex = 15;
-            this.img_persona.TabStop = false;
+            this.pbFotoUser.Location = new System.Drawing.Point(297, 146);
+            this.pbFotoUser.Name = "pbFotoUser";
+            this.pbFotoUser.Size = new System.Drawing.Size(108, 110);
+            this.pbFotoUser.TabIndex = 15;
+            this.pbFotoUser.TabStop = false;
             // 
-            // button1
+            // btnIniciar
             // 
-            this.button1.Location = new System.Drawing.Point(334, 117);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Cam";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnIniciar.Location = new System.Drawing.Point(297, 117);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(59, 23);
+            this.btnIniciar.TabIndex = 14;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.button1_Click);
             // 
             // txt_apto
             // 
@@ -407,7 +412,7 @@
             // 
             // rtxt_desc
             // 
-            this.rtxt_desc.Location = new System.Drawing.Point(19, 87);
+            this.rtxt_desc.Location = new System.Drawing.Point(28, 87);
             this.rtxt_desc.Name = "rtxt_desc";
             this.rtxt_desc.Size = new System.Drawing.Size(224, 138);
             this.rtxt_desc.TabIndex = 16;
@@ -451,10 +456,10 @@
             // pnl_v_home_ce
             // 
             this.pnl_v_home_ce.AutoSize = true;
-            this.pnl_v_home_ce.Controls.Add(this.pnl_bbdd);
             this.pnl_v_home_ce.Controls.Add(this.panel1);
-            this.pnl_v_home_ce.Controls.Add(this.pnl_incidente);
             this.pnl_v_home_ce.Controls.Add(this.pnl_visita);
+            this.pnl_v_home_ce.Controls.Add(this.pnl_bbdd);
+            this.pnl_v_home_ce.Controls.Add(this.pnl_incidente);
             this.pnl_v_home_ce.Location = new System.Drawing.Point(7, 7);
             this.pnl_v_home_ce.Name = "pnl_v_home_ce";
             this.pnl_v_home_ce.Size = new System.Drawing.Size(753, 429);
@@ -462,6 +467,7 @@
             // 
             // pnl_bbdd
             // 
+            this.pnl_bbdd.Controls.Add(this.btn_export);
             this.pnl_bbdd.Controls.Add(this.btn_usuarios);
             this.pnl_bbdd.Controls.Add(this.button3);
             this.pnl_bbdd.Controls.Add(this.dt);
@@ -473,9 +479,19 @@
             this.pnl_bbdd.Controls.Add(this.label13);
             this.pnl_bbdd.Location = new System.Drawing.Point(99, 17);
             this.pnl_bbdd.Name = "pnl_bbdd";
-            this.pnl_bbdd.Size = new System.Drawing.Size(429, 393);
+            this.pnl_bbdd.Size = new System.Drawing.Size(499, 393);
             this.pnl_bbdd.TabIndex = 3;
             this.pnl_bbdd.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
+            // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(19, 370);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(75, 23);
+            this.btn_export.TabIndex = 15;
+            this.btn_export.Text = "exportar";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
             // btn_usuarios
             // 
@@ -610,6 +626,24 @@
             this.label13.Text = "Exportar Datos";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
+            // cboDispositivos
+            // 
+            this.cboDispositivos.FormattingEnabled = true;
+            this.cboDispositivos.Location = new System.Drawing.Point(363, 117);
+            this.cboDispositivos.Name = "cboDispositivos";
+            this.cboDispositivos.Size = new System.Drawing.Size(121, 21);
+            this.cboDispositivos.TabIndex = 21;
+            // 
+            // btn_cam
+            // 
+            this.btn_cam.Location = new System.Drawing.Point(412, 146);
+            this.btn_cam.Name = "btn_cam";
+            this.btn_cam.Size = new System.Drawing.Size(75, 23);
+            this.btn_cam.TabIndex = 22;
+            this.btn_cam.Text = "tomar foto";
+            this.btn_cam.UseVisualStyleBackColor = true;
+            this.btn_cam.Click += new System.EventHandler(this.btn_cam_Click);
+            // 
             // v_home_ce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -625,7 +659,7 @@
             this.panel1.ResumeLayout(false);
             this.pnl_visita.ResumeLayout(false);
             this.pnl_visita.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_persona)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).EndInit();
             this.pnl_vehiculo.ResumeLayout(false);
             this.pnl_vehiculo.PerformLayout();
             this.pnl_incidente.ResumeLayout(false);
@@ -664,9 +698,9 @@
         private System.Windows.Forms.TextBox txt_apto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_fecha_v;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox img_persona;
+        private System.Windows.Forms.PictureBox pbFotoUser;
         private System.Windows.Forms.Panel pnl_incidente;
         private System.Windows.Forms.Panel pnl_v_home_ce;
         private System.Windows.Forms.TextBox txt_nombre;
@@ -694,5 +728,8 @@
         private System.Windows.Forms.DataGridView dt;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_usuarios;
+        private System.Windows.Forms.Button btn_export;
+        private System.Windows.Forms.ComboBox cboDispositivos;
+        private System.Windows.Forms.Button btn_cam;
     }
 }

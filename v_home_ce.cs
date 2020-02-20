@@ -8,16 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+
+using  System.Drawing.Imaging;
+
+using  AForge.Video;
+
+using AForge.Video.DirectShow;
+
 namespace visitorApp
 {
     public partial class v_home_ce : Form
     {
 
         Database miDB = new Database();
+        private bool ExistenDispositivos = false;
+
+        private FilterInfoCollection DispositivosDeVideo;
+
+        private VideoCaptureDevice FuenteDeVideo = null;
+
+
         public v_home_ce()
         {
             InitializeComponent();
             autoLlenarId(txt_id);
+            BuscarDispositivos();
 
         }
 
@@ -64,6 +80,99 @@ namespace visitorApp
             DataTable table = new DataTable();
             //string tipo = "visita";
             dt.DataSource = (miDB.LlenarTabla(table, tipo, arrfecha));
+        }
+
+
+        private void CopiarGrilla()
+        {
+            dt.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            dt.MultiSelect = true;
+            dt.SelectAll();
+            DataObject dataObj = dt.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
+
+            dt.MultiSelect = false;
+            dt.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+        }
+
+
+        private void ExportarAExcel()
+        {
+            this.CopiarGrilla();
+
+            Microsoft.Office.Interop.Excel.Application xlexcel;
+            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+            object valor = System.Reflection.Missing.Value;
+            xlexcel = new Microsoft.Office.Interop.Excel.Application();
+            xlexcel.Visible = true;
+            xlWorkBook = xlexcel.Workbooks.Add(valor);
+            xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
+            CR.Select();
+            xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+
+            MessageBox.Show("Exportación finalizada");
+        }
+
+
+        public void CargarDispositivos(FilterInfoCollection Dispositivos)
+
+        {
+            for (int i = 0; i < Dispositivos.Count; i++)
+
+                cboDispositivos.Items.Add(Dispositivos[i].Name.ToString());
+            //cboDispositivos es nuestro combobox
+
+            cboDispositivos.Text = cboDispositivos.Items[0].ToString();
+
+        }
+        public void BuscarDispositivos()
+
+        {
+
+            DispositivosDeVideo =
+            new FilterInfoCollection(FilterCategory.VideoInputDevice);
+
+            if (DispositivosDeVideo.Count == 0)
+
+                ExistenDispositivos = false;
+            else
+
+            {
+
+                ExistenDispositivos = true;
+
+                CargarDispositivos(DispositivosDeVideo);
+
+            }
+
+        }
+        public void TerminarFuenteDeVideo()
+
+        {
+            if (!(FuenteDeVideo == null))
+
+                if (FuenteDeVideo.IsRunning)
+
+                {
+
+                    FuenteDeVideo.SignalToStop();
+
+                    FuenteDeVideo = null;
+
+                }
+
+        }
+        private void video_NuevoFrame(object sender, NewFrameEventArgs eventArgs)
+
+        {
+            Bitmap Imagen = (Bitmap)eventArgs.Frame.Clone();
+
+            pbFotoUser.Image = Imagen;
+            //pbFotoUser es nuestro pictureBox
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -115,7 +224,7 @@ namespace visitorApp
 
         private void txt_numero_TextChanged(object sender, EventArgs e)
         {
-            autoLlenarPersona(txt_id.Text, txt_nombre, comboBox_id, txt_telefono, img_persona);
+            autoLlenarPersona(txt_id.Text, txt_nombre, comboBox_id, txt_telefono, pbFotoUser);
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -131,6 +240,47 @@ namespace visitorApp
         private void button1_Click(object sender, EventArgs e)
         {
 
+            if (btnIniciar.Text == "Iniciar")
+
+            {
+                if (ExistenDispositivos)
+
+                {
+
+                    FuenteDeVideo = new VideoCaptureDevice(DispositivosDeVideo[cboDispositivos.SelectedIndex].MonikerString);
+
+                    FuenteDeVideo.NewFrame += new NewFrameEventHandler(video_NuevoFrame);
+
+                    FuenteDeVideo.Start();
+
+                    btnIniciar.Text = "Detener";
+
+                    cboDispositivos.Enabled = false;
+
+                    //gbMenu.Text = DispositivosDeVideo[cboDispositivos.SelectedIndex].Name.ToString();
+
+                }
+                else
+
+                    MessageBox.Show("Error: No se encuentra dispositivo.");
+
+            }
+            else
+
+            {
+                if (FuenteDeVideo.IsRunning)
+
+                {
+
+                    TerminarFuenteDeVideo();
+
+                    btnIniciar.Text = "Iniciar";
+
+                    cboDispositivos.Enabled = true;
+
+                }
+
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -284,6 +434,19 @@ namespace visitorApp
             chk_Box_filtro.Checked = false;
             chk_Box_filtro.Visible=false;
             MostrarTabla(tipo);
+        }
+
+        private void btn_export_Click(object sender, EventArgs e)
+        {
+            ExportarAExcel();
+        }
+
+        private void btn_cam_Click(object sender, EventArgs e)
+        {
+            string nombre = txt_id.Text;
+            string path = "bodega/";
+            pbFotoUser.Image.Save(path+nombre+".png",ImageFormat.Jpeg);
+
         }
     }
 }
