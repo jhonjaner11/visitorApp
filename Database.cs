@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.IO;
+using System.Windows.Forms;
 
 namespace visitorApp
 {
@@ -182,6 +183,32 @@ namespace visitorApp
             return respuesta;
         }
 
+        public bool InsertIncidente(string[] a)
+        {
+            bool res;
+            string fecha = a[0];
+            string desc = a[1];
+
+            string query = "insert into incidente (fecha, descripcion ) values  ('"+fecha+"','"+desc+"')";
+            try
+            {
+                OpenConnection();
+                Console.WriteLine(query);
+                SQLiteCommand comando = new SQLiteCommand(query, myConnection);
+                comando.ExecuteNonQuery();
+                res = true;
+                CloseConnection();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                res = false;
+            }
+
+
+            return res;
+        }
+
         public List<string> GetPersonas()
         {
             string query = "SELECT id as ID FROM persona";
@@ -251,5 +278,50 @@ namespace visitorApp
 
             return res;
         }
+
+        public System.Data.DataTable LlenarTabla(System.Data.DataTable table, string tipo, string[] fecha) 
+        {
+            string query;
+            string queryTime;
+            if (tipo=="visita")
+            {
+                 query = "select p.nombre, v.identificacion, v.fecha, v.apto, v.vh, v.placa from visita v inner join persona p on v.identificacion = p.id ";
+            }
+            else if (tipo == "incidente")
+            {
+                 query = "select * from incidente ";
+            }
+            else if (tipo == "persona")
+            {
+                query = "select * from persona ";
+            }
+            else if (tipo == "usuario")
+            {
+                query = "select * from usuario ";
+            }
+            else
+            {
+                query = "select null";
+            }
+            
+            if (fecha[0]!="")
+            {
+                //where(fecha >= '18/02/2020' AND fecha < '20/02/2020')
+                queryTime = "where(fecha >= '"+ fecha[0] + "' AND fecha <= '"+ fecha[1] + "'+'+1 day') ";
+            }
+            else
+            {
+                queryTime = "";
+            }
+           
+            SQLiteCommand comand = new SQLiteCommand(query+queryTime, myConnection);
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter();
+            adapter.SelectCommand = (comand);
+            //DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+            //DataGrid.DataSource = table;
+        }
+
     }
 }

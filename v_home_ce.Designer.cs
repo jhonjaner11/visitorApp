@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_exportar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_reg_incidente = new System.Windows.Forms.Button();
             this.btn_reg_visita = new System.Windows.Forms.Button();
             this.pnl_visita = new System.Windows.Forms.Panel();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.img_persona = new System.Windows.Forms.PictureBox();
@@ -52,28 +57,42 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_incidente = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btn_enviar_incidente = new System.Windows.Forms.Button();
+            this.rtxt_desc = new System.Windows.Forms.RichTextBox();
             this.txt_fecha_i = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pnl_v_home_ce = new System.Windows.Forms.Panel();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_telefono = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.pnl_bbdd = new System.Windows.Forms.Panel();
+            this.btn_usuarios = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dt = new System.Windows.Forms.DataGridView();
+            this.chk_Box_filtro = new System.Windows.Forms.CheckBox();
+            this.pnl_filtro = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.time_final = new System.Windows.Forms.DateTimePicker();
+            this.time_inicio = new System.Windows.Forms.DateTimePicker();
+            this.btn_mostrar_incidentes = new System.Windows.Forms.Button();
+            this.btn_mostrar_visitas = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnl_visita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_persona)).BeginInit();
             this.pnl_vehiculo.SuspendLayout();
             this.pnl_incidente.SuspendLayout();
             this.pnl_v_home_ce.SuspendLayout();
+            this.pnl_bbdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt)).BeginInit();
+            this.pnl_filtro.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_exportar);
             this.panel1.Controls.Add(this.btn_salir);
             this.panel1.Controls.Add(this.btn_reg_incidente);
             this.panel1.Controls.Add(this.btn_reg_visita);
@@ -82,6 +101,16 @@
             this.panel1.Size = new System.Drawing.Size(70, 303);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btn_exportar
+            // 
+            this.btn_exportar.Location = new System.Drawing.Point(3, 123);
+            this.btn_exportar.Name = "btn_exportar";
+            this.btn_exportar.Size = new System.Drawing.Size(62, 55);
+            this.btn_exportar.TabIndex = 3;
+            this.btn_exportar.Text = "Exportar Datos";
+            this.btn_exportar.UseVisualStyleBackColor = true;
+            this.btn_exportar.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // btn_salir
             // 
@@ -135,11 +164,43 @@
             this.pnl_visita.Controls.Add(this.label4);
             this.pnl_visita.Controls.Add(this.label3);
             this.pnl_visita.Controls.Add(this.label2);
-            this.pnl_visita.Location = new System.Drawing.Point(102, 9);
+            this.pnl_visita.Location = new System.Drawing.Point(134, 54);
             this.pnl_visita.Name = "pnl_visita";
-            this.pnl_visita.Size = new System.Drawing.Size(450, 303);
+            this.pnl_visita.Size = new System.Drawing.Size(512, 372);
             this.pnl_visita.TabIndex = 1;
             this.pnl_visita.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_visita_Paint);
+            // 
+            // txt_telefono
+            // 
+            this.txt_telefono.Location = new System.Drawing.Point(22, 175);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(136, 20);
+            this.txt_telefono.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(19, 159);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 13);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Telefono:";
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(21, 133);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(245, 20);
+            this.txt_nombre.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Nombre:";
             // 
             // label1
             // 
@@ -321,35 +382,36 @@
             // 
             // pnl_incidente
             // 
-            this.pnl_incidente.Controls.Add(this.button3);
-            this.pnl_incidente.Controls.Add(this.richTextBox1);
+            this.pnl_incidente.Controls.Add(this.btn_enviar_incidente);
+            this.pnl_incidente.Controls.Add(this.rtxt_desc);
             this.pnl_incidente.Controls.Add(this.txt_fecha_i);
             this.pnl_incidente.Controls.Add(this.label10);
             this.pnl_incidente.Controls.Add(this.label11);
             this.pnl_incidente.Controls.Add(this.label9);
-            this.pnl_incidente.Location = new System.Drawing.Point(102, 9);
+            this.pnl_incidente.Location = new System.Drawing.Point(299, 26);
             this.pnl_incidente.Name = "pnl_incidente";
             this.pnl_incidente.Size = new System.Drawing.Size(451, 303);
             this.pnl_incidente.TabIndex = 2;
             this.pnl_incidente.Visible = false;
             this.pnl_incidente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_indicente_Paint);
             // 
-            // button3
+            // btn_enviar_incidente
             // 
-            this.button3.Location = new System.Drawing.Point(93, 231);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "enviar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_enviar_incidente.Location = new System.Drawing.Point(93, 231);
+            this.btn_enviar_incidente.Name = "btn_enviar_incidente";
+            this.btn_enviar_incidente.Size = new System.Drawing.Size(75, 23);
+            this.btn_enviar_incidente.TabIndex = 17;
+            this.btn_enviar_incidente.Text = "enviar";
+            this.btn_enviar_incidente.UseVisualStyleBackColor = true;
+            this.btn_enviar_incidente.Click += new System.EventHandler(this.btn_enviar_incidente_Click);
             // 
-            // richTextBox1
+            // rtxt_desc
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(19, 87);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(224, 138);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.rtxt_desc.Location = new System.Drawing.Point(19, 87);
+            this.rtxt_desc.Name = "rtxt_desc";
+            this.rtxt_desc.Size = new System.Drawing.Size(224, 138);
+            this.rtxt_desc.TabIndex = 16;
+            this.rtxt_desc.Text = "";
             // 
             // txt_fecha_i
             // 
@@ -389,45 +451,164 @@
             // pnl_v_home_ce
             // 
             this.pnl_v_home_ce.AutoSize = true;
+            this.pnl_v_home_ce.Controls.Add(this.pnl_bbdd);
             this.pnl_v_home_ce.Controls.Add(this.panel1);
-            this.pnl_v_home_ce.Controls.Add(this.pnl_visita);
             this.pnl_v_home_ce.Controls.Add(this.pnl_incidente);
+            this.pnl_v_home_ce.Controls.Add(this.pnl_visita);
             this.pnl_v_home_ce.Location = new System.Drawing.Point(7, 7);
             this.pnl_v_home_ce.Name = "pnl_v_home_ce";
-            this.pnl_v_home_ce.Size = new System.Drawing.Size(567, 328);
+            this.pnl_v_home_ce.Size = new System.Drawing.Size(753, 429);
             this.pnl_v_home_ce.TabIndex = 3;
             // 
-            // txt_nombre
+            // pnl_bbdd
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(21, 133);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(245, 20);
-            this.txt_nombre.TabIndex = 18;
+            this.pnl_bbdd.Controls.Add(this.btn_usuarios);
+            this.pnl_bbdd.Controls.Add(this.button3);
+            this.pnl_bbdd.Controls.Add(this.dt);
+            this.pnl_bbdd.Controls.Add(this.chk_Box_filtro);
+            this.pnl_bbdd.Controls.Add(this.pnl_filtro);
+            this.pnl_bbdd.Controls.Add(this.btn_mostrar_incidentes);
+            this.pnl_bbdd.Controls.Add(this.btn_mostrar_visitas);
+            this.pnl_bbdd.Controls.Add(this.label14);
+            this.pnl_bbdd.Controls.Add(this.label13);
+            this.pnl_bbdd.Location = new System.Drawing.Point(99, 17);
+            this.pnl_bbdd.Name = "pnl_bbdd";
+            this.pnl_bbdd.Size = new System.Drawing.Size(429, 393);
+            this.pnl_bbdd.TabIndex = 3;
+            this.pnl_bbdd.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
-            // label5
+            // btn_usuarios
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Nombre:";
+            this.btn_usuarios.Location = new System.Drawing.Point(258, 177);
+            this.btn_usuarios.Name = "btn_usuarios";
+            this.btn_usuarios.Size = new System.Drawing.Size(77, 34);
+            this.btn_usuarios.TabIndex = 14;
+            this.btn_usuarios.Text = "Usuarios";
+            this.btn_usuarios.UseVisualStyleBackColor = true;
+            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click);
             // 
-            // txt_telefono
+            // button3
             // 
-            this.txt_telefono.Location = new System.Drawing.Point(22, 175);
-            this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(136, 20);
-            this.txt_telefono.TabIndex = 20;
+            this.button3.Location = new System.Drawing.Point(175, 176);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(77, 34);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Personas";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_3);
             // 
-            // label12
+            // dt
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 159);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 13);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Telefono:";
+            this.dt.AllowUserToOrderColumns = true;
+            this.dt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dt.Location = new System.Drawing.Point(19, 218);
+            this.dt.Name = "dt";
+            this.dt.Size = new System.Drawing.Size(394, 150);
+            this.dt.TabIndex = 12;
+            this.dt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellContentClick);
+            // 
+            // chk_Box_filtro
+            // 
+            this.chk_Box_filtro.AutoSize = true;
+            this.chk_Box_filtro.Location = new System.Drawing.Point(317, 56);
+            this.chk_Box_filtro.Name = "chk_Box_filtro";
+            this.chk_Box_filtro.Size = new System.Drawing.Size(45, 17);
+            this.chk_Box_filtro.TabIndex = 11;
+            this.chk_Box_filtro.Text = "filtro";
+            this.chk_Box_filtro.UseVisualStyleBackColor = true;
+            this.chk_Box_filtro.CheckedChanged += new System.EventHandler(this.chk_Box_filtro_CheckedChanged);
+            // 
+            // pnl_filtro
+            // 
+            this.pnl_filtro.Controls.Add(this.label16);
+            this.pnl_filtro.Controls.Add(this.label15);
+            this.pnl_filtro.Controls.Add(this.time_final);
+            this.pnl_filtro.Controls.Add(this.time_inicio);
+            this.pnl_filtro.Location = new System.Drawing.Point(19, 101);
+            this.pnl_filtro.Name = "pnl_filtro";
+            this.pnl_filtro.Size = new System.Drawing.Size(349, 70);
+            this.pnl_filtro.TabIndex = 10;
+            this.pnl_filtro.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(7, 41);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 13);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Fecha Final:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 9);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(68, 13);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Fecha Inicio:";
+            // 
+            // time_final
+            // 
+            this.time_final.CustomFormat = "";
+            this.time_final.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.time_final.Location = new System.Drawing.Point(87, 41);
+            this.time_final.Name = "time_final";
+            this.time_final.Size = new System.Drawing.Size(91, 20);
+            this.time_final.TabIndex = 7;
+            // 
+            // time_inicio
+            // 
+            this.time_inicio.CustomFormat = "";
+            this.time_inicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.time_inicio.Location = new System.Drawing.Point(87, 9);
+            this.time_inicio.Name = "time_inicio";
+            this.time_inicio.Size = new System.Drawing.Size(146, 20);
+            this.time_inicio.TabIndex = 6;
+            this.time_inicio.Value = new System.DateTime(2020, 2, 19, 23, 49, 47, 0);
+            this.time_inicio.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // btn_mostrar_incidentes
+            // 
+            this.btn_mostrar_incidentes.Location = new System.Drawing.Point(92, 177);
+            this.btn_mostrar_incidentes.Name = "btn_mostrar_incidentes";
+            this.btn_mostrar_incidentes.Size = new System.Drawing.Size(77, 34);
+            this.btn_mostrar_incidentes.TabIndex = 5;
+            this.btn_mostrar_incidentes.Text = "Incidentes";
+            this.btn_mostrar_incidentes.UseVisualStyleBackColor = true;
+            this.btn_mostrar_incidentes.Click += new System.EventHandler(this.btn_mostrar_incidencias);
+            // 
+            // btn_mostrar_visitas
+            // 
+            this.btn_mostrar_visitas.Location = new System.Drawing.Point(19, 177);
+            this.btn_mostrar_visitas.Name = "btn_mostrar_visitas";
+            this.btn_mostrar_visitas.Size = new System.Drawing.Size(67, 34);
+            this.btn_mostrar_visitas.TabIndex = 4;
+            this.btn_mostrar_visitas.Text = "Visitas";
+            this.btn_mostrar_visitas.UseVisualStyleBackColor = true;
+            this.btn_mostrar_visitas.Click += new System.EventHandler(this.btn_bajar_visitas_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 57);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(280, 26);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Este modulo permite descargar en formato Excel \r\nlas visitas e incidentes que est" +
+    "en registrados en el sistema";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(13, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(223, 33);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Exportar Datos";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // v_home_ce
             // 
@@ -435,7 +616,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(574, 341);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.pnl_v_home_ce);
             this.Name = "v_home_ce";
             this.Text = "VisitorApp";
@@ -451,6 +632,11 @@
             this.pnl_incidente.PerformLayout();
             this.pnl_v_home_ce.ResumeLayout(false);
             this.pnl_v_home_ce.PerformLayout();
+            this.pnl_bbdd.ResumeLayout(false);
+            this.pnl_bbdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt)).EndInit();
+            this.pnl_filtro.ResumeLayout(false);
+            this.pnl_filtro.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,16 +668,31 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox img_persona;
         private System.Windows.Forms.Panel pnl_incidente;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox txt_fecha_i;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel pnl_v_home_ce;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_telefono;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_exportar;
+        private System.Windows.Forms.Button btn_enviar_incidente;
+        private System.Windows.Forms.RichTextBox rtxt_desc;
+        private System.Windows.Forms.TextBox txt_fecha_i;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel pnl_bbdd;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btn_mostrar_incidentes;
+        private System.Windows.Forms.Button btn_mostrar_visitas;
+        private System.Windows.Forms.DateTimePicker time_inicio;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DateTimePicker time_final;
+        private System.Windows.Forms.CheckBox chk_Box_filtro;
+        private System.Windows.Forms.Panel pnl_filtro;
+        private System.Windows.Forms.DataGridView dt;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_usuarios;
     }
 }
