@@ -107,7 +107,38 @@ namespace visitorApp
             return res;
         }
 
-        public void InserTPerson(string []a)
+        public bool ExistInVisita(string id)
+        {
+            string query = "select * from visita where identificacion='"+id+"'";
+            bool res = false;
+            OpenConnection();
+            try
+            {
+                SQLiteCommand sql = new SQLiteCommand(query, myConnection);
+                SQLiteDataReader reader = sql.ExecuteReader();
+                if (reader.Read())
+                {
+                    id = reader["id"].ToString();
+                    Console.WriteLine("si existe: "+id);
+                    res = true;
+                }
+                else
+                {
+                    res = false;
+                }
+
+                //Console.WriteLine(reader["login"].ToString());
+                reader.Close();
+            }
+            catch
+            {
+                res = false;
+            }
+            CloseConnection();
+            return res;
+        }
+
+        public void InsertPerson(string []a)
         {
             string id=a[0];
             string nombre = a[1];
@@ -156,7 +187,7 @@ namespace visitorApp
             else
             {
                 string[] arrPersona = { id, nombre, tp_id, path_foto, telefono };
-                InserTPerson(arrPersona);
+                InsertPerson(arrPersona);
 
                 string queryB = "insert into visita (identificacion, fecha, apto, vh, placa) values  ('";
                 string query2B = id + "','" + fecha + "','" + apto + "','" + vehiculo + "','" + placa + "')";
@@ -209,17 +240,41 @@ namespace visitorApp
             return res;
         }
 
+        public bool InsertUsuario(string[] a)
+        {
+            bool res;
+            string login = a[0];
+            string contraseña= a[1];
+            string cargo = a[2];
+            string nombre = a[3]; 
+
+            string query = "insert into usuario (login, contraseña, cargo, nombre ) values  ('";
+            string query2 = login+"','"+contraseña+ "','"+cargo+"','"+nombre+"')";
+            query = query + query2;
+            try
+            {
+                OpenConnection();
+                Console.WriteLine(query);
+                SQLiteCommand comando = new SQLiteCommand(query, myConnection);
+                comando.ExecuteNonQuery();
+                res = true;
+                CloseConnection();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                res = false;
+            }
+
+
+            return res;
+        }
         public List<string> GetPersonas()
         {
             string query = "SELECT id as ID FROM persona";
             
-
-
             List<string> li = new List<string>();
 
-       
-
-           
             OpenConnection();
             try
             {
@@ -279,13 +334,116 @@ namespace visitorApp
             return res;
         }
 
+        public string[] GetIncidente(string id)
+        {
+            string[] res = new string[3];
+            string query = "Select * from incidente where id=" + id + "";
+            OpenConnection();
+            try
+            {
+                SQLiteCommand sql = new SQLiteCommand(query, myConnection);
+                SQLiteDataReader reader = sql.ExecuteReader();
+                if (reader.Read())
+                {
+                    res[0] = reader["id"].ToString();
+                    res[1] = reader["fecha"].ToString();
+                    res[2] = reader["descripcion"].ToString();
+                    
+                }
+                else
+                {
+                    //usuario = "Errado";
+                }
+
+                //Console.WriteLine(reader["login"].ToString());
+                reader.Close();
+            }
+            catch
+            {
+                //usuario = "Errado";
+            }
+            CloseConnection();
+
+
+            return res;
+        }
+
+        public string[] GetUsuario(string id)
+        {
+            string[] res = new string[4];
+            string query = "Select * from usuario where id=" + id + "";
+            OpenConnection();
+            try
+            {
+                SQLiteCommand sql = new SQLiteCommand(query, myConnection);
+                SQLiteDataReader reader = sql.ExecuteReader();
+                if (reader.Read())
+                {
+                    res[0] = reader["login"].ToString();
+                    res[1] = reader["nombre"].ToString();
+                    res[2] = reader["contraseña"].ToString();
+                    res[3] = reader["cargo"].ToString();
+                }
+                else
+                {
+                    //usuario = "Errado";
+                }
+
+                //Console.WriteLine(reader["login"].ToString());
+                reader.Close();
+            }
+            catch
+            {
+                //usuario = "Errado";
+            }
+            CloseConnection();
+
+
+            return res;
+        }
+
+        public string[] GetVisita(string id)
+        {
+            string[] res = new string[5];
+            string query = "Select * from visita where id=" + id + "";
+            OpenConnection();
+            try
+            {
+                SQLiteCommand sql = new SQLiteCommand(query, myConnection);
+                SQLiteDataReader reader = sql.ExecuteReader();
+                if (reader.Read())
+                {
+                    res[0] = reader["identificacion"].ToString();
+                    res[1] = reader["fecha"].ToString();
+                    res[2] = reader["apto"].ToString();
+                    res[3] = reader["vh"].ToString();
+                    res[4] = reader["placa"].ToString();
+                }
+                else
+                {
+                    //usuario = "Errado";
+                }
+
+                //Console.WriteLine(reader["login"].ToString());
+                reader.Close();
+            }
+            catch
+            {
+                //usuario = "Errado";
+            }
+            CloseConnection();
+
+
+            return res;
+        }
+
         public System.Data.DataTable LlenarTabla(System.Data.DataTable table, string tipo, string[] fecha) 
         {
             string query;
             string queryTime;
             if (tipo=="visita")
             {
-                 query = "select p.nombre, v.identificacion, v.fecha, v.apto, v.vh, v.placa from visita v inner join persona p on v.identificacion = p.id ";
+                 query = "select v.id, p.nombre, v.identificacion, v.fecha, v.apto, v.vh, v.placa from visita v inner join persona p on v.identificacion = p.id ";
             }
             else if (tipo == "incidente")
             {
@@ -323,5 +481,228 @@ namespace visitorApp
             //DataGrid.DataSource = table;
         }
 
+        public bool DeleteRegistro(string id, string tipo)
+        {
+            bool res=false;
+            string query = "delete from " + tipo;
+            string queryWhere;
+            if (tipo=="usuario")
+            {
+                queryWhere = " where id='" + id + "'";
+            }
+            else if (tipo == "incidente")
+            {
+                queryWhere = " where id='" + id + "'";
+            }
+            else if (tipo == "visita")
+            {
+                queryWhere = " where id='" + id + "'";
+            }
+            else 
+            {
+
+                queryWhere = " where id='" + id + "'";
+            }
+            query = query + queryWhere;
+            //DELETE FROM table_name WHERE condition;
+            Console.WriteLine(query);
+
+            OpenConnection();
+            try
+            {
+                if (tipo=="persona")
+                {
+                    Console.Write("entro a persona!");
+                    if (!ExistInVisita(id))
+                    {
+                        Console.Write("no existe en visita");
+                        OpenConnection();
+                        SQLiteCommand comando = new SQLiteCommand(query, myConnection);
+                        comando.ExecuteNonQuery();
+                        CloseConnection();
+                        res = true;
+                    }
+                    else
+                    {
+                        Console.Write("existe en visita");
+                        res = false;
+                    }
+                   
+                }
+                else 
+                {
+                    SQLiteCommand comando = new SQLiteCommand(query, myConnection);
+                    comando.ExecuteNonQuery();
+                    res = true;
+                }
+                
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                res = false;
+            }
+            CloseConnection();
+
+            return res;
+        }
+
+        public bool UpdateUsuario(string[] a)
+        {
+
+            bool res;
+
+            
+            string login = a[0];
+            string contraseña = a[1];
+            string nombre = a[2];
+            string cargo = a[3];
+            string id = a[4];
+
+            string query = "update usuario set ";
+            query = query+ " login='" +login+"',";
+            query = query+ "contraseña='" +contraseña+"',";
+            query = query+ "cargo='" +cargo+"',";
+            query = query+"nombre='" +nombre+"' ";
+            query = query+" where id=" +id;
+            Console.WriteLine(query);
+
+
+            try
+            {
+                OpenConnection();
+                Console.WriteLine(query);
+                SQLiteCommand comando = new SQLiteCommand(query, myConnection);
+                comando.ExecuteNonQuery();
+                res = true;
+                CloseConnection();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                res = false;
+            }
+
+
+            return res;
+        }
+
+        public bool UpdateIncidente(string[] a)
+        {
+
+            bool res;
+
+
+            string id = a[0];
+            string descripcion = a[1];
+
+
+            string query = "update incidente set ";
+            query = query + " descripcion='" + descripcion + "'";
+
+            query = query + " where id=" + id;
+            Console.WriteLine(query);
+
+
+            try
+            {
+                OpenConnection();
+                Console.WriteLine(query);
+                SQLiteCommand comando = new SQLiteCommand(query, myConnection);
+                comando.ExecuteNonQuery();
+                res = true;
+                CloseConnection();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                res = false;
+            }
+
+
+            return res;
+        }
+
+        public bool UpdatePersona(string[] a)
+        {
+
+            bool res;
+
+
+            string nombre = a[0];
+            string tipoID = a[1];
+            string telefono = a[2];
+            string id = a[3];
+
+            string query = "update persona set ";
+            query = query + " nombre='" + nombre + "',";
+            query = query + "tipo_id='" + tipoID + "',";
+            query = query + "telefono='" + telefono + "' ";
+            query = query + " where id=" + id;
+            Console.WriteLine(query);
+
+
+            try
+            {
+                OpenConnection();
+                Console.WriteLine(query);
+                SQLiteCommand comando = new SQLiteCommand(query, myConnection);
+                comando.ExecuteNonQuery();
+                res = true;
+                CloseConnection();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                res = false;
+            }
+
+
+            return res;
+        }
+
+        public bool UpdateVisita(string[] a)
+        {
+
+            bool res;
+
+
+            string id_visitante = a[0];
+            string apto = a[1];
+            string vh = a[2];
+            string placa = a[3];
+            string id = a[4];
+
+            string query = "update visita set ";
+            query = query + " identificacion='" + id_visitante + "',";
+            query = query + "apto='" + apto + "',";
+            query = query + "vh='" + vh + "',";
+            query = query + "placa='" + placa + "' ";
+            query = query + " where id=" + id;
+            Console.WriteLine(query);
+
+
+            try
+            {
+                OpenConnection();
+                Console.WriteLine(query);
+                SQLiteCommand comando = new SQLiteCommand(query, myConnection);
+                comando.ExecuteNonQuery();
+                res = true;
+                CloseConnection();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                res = false;
+            }
+
+
+            return res;
+        }
+
+
+        
     }
 }

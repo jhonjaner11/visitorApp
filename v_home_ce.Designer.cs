@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v_home_ce));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_exportar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_reg_incidente = new System.Windows.Forms.Button();
             this.btn_reg_visita = new System.Windows.Forms.Button();
             this.pnl_visita = new System.Windows.Forms.Panel();
+            this.btn_cam = new System.Windows.Forms.Button();
             this.txt_telefono = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
@@ -41,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pbFotoUser = new System.Windows.Forms.PictureBox();
-            this.btnIniciar = new System.Windows.Forms.Button();
             this.txt_apto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_fecha_v = new System.Windows.Forms.TextBox();
@@ -65,6 +66,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pnl_v_home_ce = new System.Windows.Forms.Panel();
             this.pnl_bbdd = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_export = new System.Windows.Forms.Button();
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -79,8 +83,6 @@
             this.btn_mostrar_visitas = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.cboDispositivos = new System.Windows.Forms.ComboBox();
-            this.btn_cam = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnl_visita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).BeginInit();
@@ -111,7 +113,7 @@
             this.btn_exportar.Name = "btn_exportar";
             this.btn_exportar.Size = new System.Drawing.Size(62, 55);
             this.btn_exportar.TabIndex = 3;
-            this.btn_exportar.Text = "Exportar Datos";
+            this.btn_exportar.Text = "Base de datos";
             this.btn_exportar.UseVisualStyleBackColor = true;
             this.btn_exportar.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -150,7 +152,6 @@
             this.pnl_visita.AutoSize = true;
             this.pnl_visita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_visita.Controls.Add(this.btn_cam);
-            this.pnl_visita.Controls.Add(this.cboDispositivos);
             this.pnl_visita.Controls.Add(this.txt_telefono);
             this.pnl_visita.Controls.Add(this.label12);
             this.pnl_visita.Controls.Add(this.txt_nombre);
@@ -158,7 +159,6 @@
             this.pnl_visita.Controls.Add(this.label1);
             this.pnl_visita.Controls.Add(this.button2);
             this.pnl_visita.Controls.Add(this.pbFotoUser);
-            this.pnl_visita.Controls.Add(this.btnIniciar);
             this.pnl_visita.Controls.Add(this.txt_apto);
             this.pnl_visita.Controls.Add(this.label8);
             this.pnl_visita.Controls.Add(this.txt_fecha_v);
@@ -169,11 +169,21 @@
             this.pnl_visita.Controls.Add(this.label4);
             this.pnl_visita.Controls.Add(this.label3);
             this.pnl_visita.Controls.Add(this.label2);
-            this.pnl_visita.Location = new System.Drawing.Point(134, 54);
+            this.pnl_visita.Location = new System.Drawing.Point(99, 17);
             this.pnl_visita.Name = "pnl_visita";
-            this.pnl_visita.Size = new System.Drawing.Size(512, 372);
+            this.pnl_visita.Size = new System.Drawing.Size(562, 393);
             this.pnl_visita.TabIndex = 1;
             this.pnl_visita.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_visita_Paint);
+            // 
+            // btn_cam
+            // 
+            this.btn_cam.Location = new System.Drawing.Point(375, 298);
+            this.btn_cam.Name = "btn_cam";
+            this.btn_cam.Size = new System.Drawing.Size(75, 23);
+            this.btn_cam.TabIndex = 22;
+            this.btn_cam.Text = "tomar foto";
+            this.btn_cam.UseVisualStyleBackColor = true;
+            this.btn_cam.Click += new System.EventHandler(this.btn_cam_Click);
             // 
             // txt_telefono
             // 
@@ -220,7 +230,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(318, 262);
+            this.button2.Location = new System.Drawing.Point(216, 329);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 16;
@@ -230,21 +240,15 @@
             // 
             // pbFotoUser
             // 
-            this.pbFotoUser.Location = new System.Drawing.Point(297, 146);
+            this.pbFotoUser.Image = ((System.Drawing.Image)(resources.GetObject("pbFotoUser.Image")));
+            this.pbFotoUser.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFotoUser.InitialImage")));
+            this.pbFotoUser.Location = new System.Drawing.Point(304, 146);
             this.pbFotoUser.Name = "pbFotoUser";
-            this.pbFotoUser.Size = new System.Drawing.Size(108, 110);
+            this.pbFotoUser.Size = new System.Drawing.Size(224, 146);
+            this.pbFotoUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFotoUser.TabIndex = 15;
             this.pbFotoUser.TabStop = false;
-            // 
-            // btnIniciar
-            // 
-            this.btnIniciar.Location = new System.Drawing.Point(297, 117);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(59, 23);
-            this.btnIniciar.TabIndex = 14;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.button1_Click);
+            this.pbFotoUser.Click += new System.EventHandler(this.pbFotoUser_Click);
             // 
             // txt_apto
             // 
@@ -275,14 +279,15 @@
             // 
             this.comboBox_id.FormattingEnabled = true;
             this.comboBox_id.Items.AddRange(new object[] {
-            "Cedula",
-            "T. I.",
+            "CC",
+            "TI",
             "Pasaporte",
             "Cedula Extranjera"});
             this.comboBox_id.Location = new System.Drawing.Point(192, 86);
             this.comboBox_id.Name = "comboBox_id";
             this.comboBox_id.Size = new System.Drawing.Size(74, 21);
             this.comboBox_id.TabIndex = 10;
+            this.comboBox_id.SelectedIndexChanged += new System.EventHandler(this.comboBox_id_SelectedIndexChanged);
             // 
             // txt_id
             // 
@@ -393,16 +398,16 @@
             this.pnl_incidente.Controls.Add(this.label10);
             this.pnl_incidente.Controls.Add(this.label11);
             this.pnl_incidente.Controls.Add(this.label9);
-            this.pnl_incidente.Location = new System.Drawing.Point(299, 26);
+            this.pnl_incidente.Location = new System.Drawing.Point(99, 17);
             this.pnl_incidente.Name = "pnl_incidente";
-            this.pnl_incidente.Size = new System.Drawing.Size(451, 303);
+            this.pnl_incidente.Size = new System.Drawing.Size(451, 344);
             this.pnl_incidente.TabIndex = 2;
             this.pnl_incidente.Visible = false;
             this.pnl_incidente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_indicente_Paint);
             // 
             // btn_enviar_incidente
             // 
-            this.btn_enviar_incidente.Location = new System.Drawing.Point(93, 231);
+            this.btn_enviar_incidente.Location = new System.Drawing.Point(192, 281);
             this.btn_enviar_incidente.Name = "btn_enviar_incidente";
             this.btn_enviar_incidente.Size = new System.Drawing.Size(75, 23);
             this.btn_enviar_incidente.TabIndex = 17;
@@ -412,15 +417,15 @@
             // 
             // rtxt_desc
             // 
-            this.rtxt_desc.Location = new System.Drawing.Point(28, 87);
+            this.rtxt_desc.Location = new System.Drawing.Point(28, 132);
             this.rtxt_desc.Name = "rtxt_desc";
-            this.rtxt_desc.Size = new System.Drawing.Size(224, 138);
+            this.rtxt_desc.Size = new System.Drawing.Size(378, 138);
             this.rtxt_desc.TabIndex = 16;
             this.rtxt_desc.Text = "";
             // 
             // txt_fecha_i
             // 
-            this.txt_fecha_i.Location = new System.Drawing.Point(262, 87);
+            this.txt_fecha_i.Location = new System.Drawing.Point(29, 87);
             this.txt_fecha_i.Name = "txt_fecha_i";
             this.txt_fecha_i.Size = new System.Drawing.Size(140, 20);
             this.txt_fecha_i.TabIndex = 15;
@@ -428,7 +433,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(259, 71);
+            this.label10.Location = new System.Drawing.Point(16, 71);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 13;
@@ -437,7 +442,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 71);
+            this.label11.Location = new System.Drawing.Point(16, 116);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 13);
             this.label11.TabIndex = 12;
@@ -458,15 +463,19 @@
             this.pnl_v_home_ce.AutoSize = true;
             this.pnl_v_home_ce.Controls.Add(this.panel1);
             this.pnl_v_home_ce.Controls.Add(this.pnl_visita);
-            this.pnl_v_home_ce.Controls.Add(this.pnl_bbdd);
             this.pnl_v_home_ce.Controls.Add(this.pnl_incidente);
+            this.pnl_v_home_ce.Controls.Add(this.pnl_bbdd);
             this.pnl_v_home_ce.Location = new System.Drawing.Point(7, 7);
             this.pnl_v_home_ce.Name = "pnl_v_home_ce";
             this.pnl_v_home_ce.Size = new System.Drawing.Size(753, 429);
             this.pnl_v_home_ce.TabIndex = 3;
+            this.pnl_v_home_ce.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_v_home_ce_Paint);
             // 
             // pnl_bbdd
             // 
+            this.pnl_bbdd.Controls.Add(this.button4);
+            this.pnl_bbdd.Controls.Add(this.button1);
+            this.pnl_bbdd.Controls.Add(this.btn_nuevo);
             this.pnl_bbdd.Controls.Add(this.btn_export);
             this.pnl_bbdd.Controls.Add(this.btn_usuarios);
             this.pnl_bbdd.Controls.Add(this.button3);
@@ -479,9 +488,39 @@
             this.pnl_bbdd.Controls.Add(this.label13);
             this.pnl_bbdd.Location = new System.Drawing.Point(99, 17);
             this.pnl_bbdd.Name = "pnl_bbdd";
-            this.pnl_bbdd.Size = new System.Drawing.Size(499, 393);
+            this.pnl_bbdd.Size = new System.Drawing.Size(562, 393);
             this.pnl_bbdd.TabIndex = 3;
             this.pnl_bbdd.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(473, 248);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Modificar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(473, 277);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btn_nuevo
+            // 
+            this.btn_nuevo.Location = new System.Drawing.Point(473, 218);
+            this.btn_nuevo.Name = "btn_nuevo";
+            this.btn_nuevo.Size = new System.Drawing.Size(75, 23);
+            this.btn_nuevo.TabIndex = 16;
+            this.btn_nuevo.Text = "Nuevo";
+            this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_export
             // 
@@ -519,8 +558,9 @@
             this.dt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dt.Location = new System.Drawing.Point(19, 218);
             this.dt.Name = "dt";
-            this.dt.Size = new System.Drawing.Size(394, 150);
+            this.dt.Size = new System.Drawing.Size(432, 150);
             this.dt.TabIndex = 12;
+            this.dt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_CellClick);
             this.dt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellContentClick);
             // 
             // chk_Box_filtro
@@ -626,24 +666,6 @@
             this.label13.Text = "Exportar Datos";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
-            // cboDispositivos
-            // 
-            this.cboDispositivos.FormattingEnabled = true;
-            this.cboDispositivos.Location = new System.Drawing.Point(363, 117);
-            this.cboDispositivos.Name = "cboDispositivos";
-            this.cboDispositivos.Size = new System.Drawing.Size(121, 21);
-            this.cboDispositivos.TabIndex = 21;
-            // 
-            // btn_cam
-            // 
-            this.btn_cam.Location = new System.Drawing.Point(412, 146);
-            this.btn_cam.Name = "btn_cam";
-            this.btn_cam.Size = new System.Drawing.Size(75, 23);
-            this.btn_cam.TabIndex = 22;
-            this.btn_cam.Text = "tomar foto";
-            this.btn_cam.UseVisualStyleBackColor = true;
-            this.btn_cam.Click += new System.EventHandler(this.btn_cam_Click);
-            // 
             // v_home_ce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,7 +720,6 @@
         private System.Windows.Forms.TextBox txt_apto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_fecha_v;
-        private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pbFotoUser;
         private System.Windows.Forms.Panel pnl_incidente;
@@ -729,7 +750,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_usuarios;
         private System.Windows.Forms.Button btn_export;
-        private System.Windows.Forms.ComboBox cboDispositivos;
         private System.Windows.Forms.Button btn_cam;
+        private System.Windows.Forms.Button btn_nuevo;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
     }
 }

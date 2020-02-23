@@ -39,15 +39,14 @@ namespace visitorApp
             //miDB.CloseConnection();
             Console.WriteLine("ddbb close autocompletarNombreProd");
 
-            if (usuario == "admin")
-            {
+            
                 this.Hide();
-                Form frm = new v_home_ce();
+                Form frm = new v_home_ce(usuario);
                 frm.ShowDialog();
                 this.Show();
 
 
-            }
+            
 
         }
 

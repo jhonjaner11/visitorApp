@@ -93,6 +93,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="RegistroModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroModificar.Designer.cs">
+      <DependentUpon>RegistroModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroNuevo.Designer.cs">
+      <DependentUpon>RegistroNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foto.Designer.cs">
+      <DependentUpon>Foto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +125,9 @@
     <Compile Include="v_home_ce.Designer.cs">
       <DependentUpon>v_home_ce.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Foto.resx">
+      <DependentUpon>Foto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +140,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistroModificar.resx">
+      <DependentUpon>RegistroModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroNuevo.resx">
+      <DependentUpon>RegistroNuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="v_home_ce.resx">
       <DependentUpon>v_home_ce.cs</DependentUpon>
     </EmbeddedResource>
