@@ -83,6 +83,8 @@
             this.btn_mostrar_visitas = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.txt_aptos_i = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnl_visita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).BeginInit();
@@ -392,6 +394,8 @@
             // 
             // pnl_incidente
             // 
+            this.pnl_incidente.Controls.Add(this.txt_aptos_i);
+            this.pnl_incidente.Controls.Add(this.label17);
             this.pnl_incidente.Controls.Add(this.btn_enviar_incidente);
             this.pnl_incidente.Controls.Add(this.rtxt_desc);
             this.pnl_incidente.Controls.Add(this.txt_fecha_i);
@@ -425,15 +429,15 @@
             // 
             // txt_fecha_i
             // 
-            this.txt_fecha_i.Location = new System.Drawing.Point(29, 87);
+            this.txt_fecha_i.Location = new System.Drawing.Point(195, 84);
             this.txt_fecha_i.Name = "txt_fecha_i";
-            this.txt_fecha_i.Size = new System.Drawing.Size(140, 20);
+            this.txt_fecha_i.Size = new System.Drawing.Size(75, 20);
             this.txt_fecha_i.TabIndex = 15;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 71);
+            this.label10.Location = new System.Drawing.Point(182, 68);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 13;
@@ -460,11 +464,11 @@
             // 
             // pnl_v_home_ce
             // 
-            this.pnl_v_home_ce.AutoSize = true;
+            this.pnl_v_home_ce.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnl_v_home_ce.Controls.Add(this.panel1);
-            this.pnl_v_home_ce.Controls.Add(this.pnl_visita);
             this.pnl_v_home_ce.Controls.Add(this.pnl_incidente);
             this.pnl_v_home_ce.Controls.Add(this.pnl_bbdd);
+            this.pnl_v_home_ce.Controls.Add(this.pnl_visita);
             this.pnl_v_home_ce.Location = new System.Drawing.Point(7, 7);
             this.pnl_v_home_ce.Name = "pnl_v_home_ce";
             this.pnl_v_home_ce.Size = new System.Drawing.Size(753, 429);
@@ -488,13 +492,13 @@
             this.pnl_bbdd.Controls.Add(this.label13);
             this.pnl_bbdd.Location = new System.Drawing.Point(99, 17);
             this.pnl_bbdd.Name = "pnl_bbdd";
-            this.pnl_bbdd.Size = new System.Drawing.Size(562, 393);
+            this.pnl_bbdd.Size = new System.Drawing.Size(641, 393);
             this.pnl_bbdd.TabIndex = 3;
             this.pnl_bbdd.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(473, 248);
+            this.button4.Location = new System.Drawing.Point(454, 130);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 18;
@@ -504,7 +508,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(473, 277);
+            this.button1.Location = new System.Drawing.Point(454, 159);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 17;
@@ -514,7 +518,7 @@
             // 
             // btn_nuevo
             // 
-            this.btn_nuevo.Location = new System.Drawing.Point(473, 218);
+            this.btn_nuevo.Location = new System.Drawing.Point(454, 100);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(75, 23);
             this.btn_nuevo.TabIndex = 16;
@@ -558,7 +562,7 @@
             this.dt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dt.Location = new System.Drawing.Point(19, 218);
             this.dt.Name = "dt";
-            this.dt.Size = new System.Drawing.Size(432, 150);
+            this.dt.Size = new System.Drawing.Size(587, 150);
             this.dt.TabIndex = 12;
             this.dt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_CellClick);
             this.dt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellContentClick);
@@ -666,6 +670,22 @@
             this.label13.Text = "Exportar Datos";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
+            // txt_aptos_i
+            // 
+            this.txt_aptos_i.Location = new System.Drawing.Point(28, 84);
+            this.txt_aptos_i.Name = "txt_aptos_i";
+            this.txt_aptos_i.Size = new System.Drawing.Size(140, 20);
+            this.txt_aptos_i.TabIndex = 19;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 68);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(139, 13);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Apartamentos Involucrados:";
+            // 
             // v_home_ce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,7 +714,6 @@
             this.pnl_filtro.ResumeLayout(false);
             this.pnl_filtro.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -754,5 +773,7 @@
         private System.Windows.Forms.Button btn_nuevo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_aptos_i;
+        private System.Windows.Forms.Label label17;
     }
 }

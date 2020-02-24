@@ -34,15 +34,31 @@ namespace visitorApp
         public string id_eliminar="";
 
         private string perfil;
+        private string[] user;
+        private string id_user;
 
-        public v_home_ce(string perfil)
+        public v_home_ce(string[] userIn)
         {
             InitializeComponent();
+            Screen screen = Screen.PrimaryScreen;
+
+            int Height = screen.Bounds.Width;
+
+            int Width = screen.Bounds.Height;
+
+            this.pnl_v_home_ce.Width = Width;
+            this.pnl_v_home_ce.Height = Height;
+            user = userIn;
+            perfil = user[3];
+            id_user = user[6];
             cargarComponentes(perfil);
             autoLlenarId(txt_id);
             //BuscarDispositivos();
             btn_cam.Enabled = false;
             btn_nuevo.Enabled = false ;
+            
+         
+
 
 
         }
@@ -323,10 +339,11 @@ namespace visitorApp
                 string vh = comboBox_tp_Vh.Text;
                 string placa = txt_placa.Text;
                 string fecha = txt_fecha_v.Text;
+                Console.WriteLine(id_user);
 
                 
                 string telefono = txt_telefono.Text;
-                string[] arrVisita = { id, tp_id, nombre, apto, vh, placa, fecha, path_foto, telefono };
+                string[] arrVisita = { id, tp_id, nombre, apto, vh, placa, fecha, path_foto, telefono , id_user};
               
                 Console.WriteLine("entra insert visita");
                 Boolean resultado = miDB.InsertVisita(arrVisita);
@@ -355,11 +372,14 @@ namespace visitorApp
         {
             string fecha = txt_fecha_i.Text;
             string desc = rtxt_desc.Text;
-            string[] arrIncidente = { fecha, desc };
-            Boolean resultado = miDB.InsertIncidente(arrIncidente);
+            string aptos = txt_aptos_i.Text;
+            string[] arrIncidente = { fecha, desc , aptos, id_user};
+         
             if (miDB.InsertIncidente(arrIncidente))
             {
                 rtxt_desc.Text = "";
+                txt_aptos_i.Text = "";
+                MessageBox.Show("Incidente Registrado");
 
             }
             else
@@ -498,7 +518,8 @@ namespace visitorApp
 
         private void pnl_v_home_ce_Paint(object sender, PaintEventArgs e)
         {
-
+  
+            
         }
 
         private void pbFotoUser_Click(object sender, EventArgs e)

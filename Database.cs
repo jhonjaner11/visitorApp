@@ -58,7 +58,7 @@ namespace visitorApp
                 SQLiteDataReader reader = sql.ExecuteReader();
                 if (reader.Read())
                 {
-                    usuario = reader["Cargo"].ToString();
+                    usuario = reader["id"].ToString();
                 }
                 else
                 {
@@ -176,12 +176,13 @@ namespace visitorApp
             string fecha = a[6]; 
             string path_foto = a[7];
             string telefono = a[8];
+            string id_user = a[9];
             string query = "";
           
 
             if (ExistPerson(id)){
-                string queryV = "insert into visita (identificacion, fecha, apto, vh, placa) values  ('";
-                string query2V = id + "','" +fecha + "','" + apto + "','" + vehiculo + "','" + placa + "')";
+                string queryV = "insert into visita (identificacion, fecha, apto, vh, placa, usuario) values  ('";
+                string query2V = id + "','" +fecha + "','" + apto + "','" + vehiculo + "','" + placa + "'," + id_user + ")";
                 query = queryV + query2V;
             }
             else
@@ -189,8 +190,8 @@ namespace visitorApp
                 string[] arrPersona = { id, nombre, tp_id, path_foto, telefono };
                 InsertPerson(arrPersona);
 
-                string queryB = "insert into visita (identificacion, fecha, apto, vh, placa) values  ('";
-                string query2B = id + "','" + fecha + "','" + apto + "','" + vehiculo + "','" + placa + "')";
+                string queryB = "insert into visita (identificacion, fecha, apto, vh, placa, usuario) values  ('";
+                string query2B = id + "','" + fecha + "','" + apto + "','" + vehiculo + "','" + placa + "',"+id_user+")";
                 query = queryB + query2B;
             }
 
@@ -219,8 +220,10 @@ namespace visitorApp
             bool res;
             string fecha = a[0];
             string desc = a[1];
+            string aptos = a[2];
+            string usuario = a[3];
 
-            string query = "insert into incidente (fecha, descripcion ) values  ('"+fecha+"','"+desc+"')";
+            string query = "insert into incidente (fecha, descripcion , apto, usuario) values  ('"+fecha+"','"+desc+"','"+aptos+"',"+usuario+")";
             try
             {
                 OpenConnection();
@@ -370,7 +373,7 @@ namespace visitorApp
 
         public string[] GetUsuario(string id)
         {
-            string[] res = new string[4];
+            string[] res = new string[7];
             string query = "Select * from usuario where id=" + id + "";
             OpenConnection();
             try
@@ -383,6 +386,9 @@ namespace visitorApp
                     res[1] = reader["nombre"].ToString();
                     res[2] = reader["contraseña"].ToString();
                     res[3] = reader["cargo"].ToString();
+                    res[4] = reader["telefono"].ToString();
+                    res[5] = reader["path_foto"].ToString();
+                    res[6] = reader["id"].ToString();
                 }
                 else
                 {
@@ -418,6 +424,7 @@ namespace visitorApp
                     res[2] = reader["apto"].ToString();
                     res[3] = reader["vh"].ToString();
                     res[4] = reader["placa"].ToString();
+                    res[5] = reader["usuario"].ToString();
                 }
                 else
                 {
@@ -437,17 +444,25 @@ namespace visitorApp
             return res;
         }
 
+
+
         public System.Data.DataTable LlenarTabla(System.Data.DataTable table, string tipo, string[] fecha) 
         {
             string query;
             string queryTime;
             if (tipo=="visita")
             {
-                 query = "select v.id, p.nombre, v.identificacion, v.fecha, v.apto, v.vh, v.placa from visita v inner join persona p on v.identificacion = p.id ";
+                query = "select v.id, p.nombre as NombreVisita, v.identificacion, v.fecha, v.apto, v.vh, v.placa, u.nombre as usuario  ";
+                query = query + "from visita v left join persona p on v.identificacion = p.id ";
+                query = query + "left join usuario u on v.usuario = u.id ";
             }
             else if (tipo == "incidente")
             {
-                 query = "select * from incidente ";
+                 query = "select i.id, i.fecha, i.descripcion, i.apto, u.nombre ";
+
+                query = query + "from incidente i ";
+                query = query + "left join usuario u on i.usuario = u.id";
+
             }
             else if (tipo == "persona")
             {

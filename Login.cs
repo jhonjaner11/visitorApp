@@ -27,26 +27,33 @@ namespace visitorApp
         {
 
             
-            string us = txt_login.Text;
-            string pw = txt_contraseña.Text;
+            string user = txt_login.Text;
+            string pass = txt_contraseña.Text;
 
 
             //miDB.OpenConnection();
-            string usuario = miDB.SelectUser(us, pw);
+            string us = miDB.SelectUser(user, pass);
+            
+            string[] usuario = miDB.GetUsuario(us);
             //sql.Parameters.AddWithValue("@login", us);
             //sql.Parameters.AddWithValue("@pw", pw);
-            Console.WriteLine(usuario);
+            //Console.WriteLine(usuario);
             //miDB.CloseConnection();
-            Console.WriteLine("ddbb close autocompletarNombreProd");
-
-            
-                this.Hide();
-                Form frm = new v_home_ce(usuario);
-                frm.ShowDialog();
-                this.Show();
 
 
-            
+     
+
+            this.Hide();
+            Form frm = new v_home_ce(usuario);
+
+   
+            frm.ShowDialog();
+            this.Show();
+
+           
+  
+
+
 
         }
 
