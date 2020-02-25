@@ -41,17 +41,24 @@ namespace visitorApp
             //miDB.CloseConnection();
 
 
-     
+            Console.WriteLine("us:"+ us);
+            if (us != "Errado")
+            {
+                this.Hide();
+                Form frm = new v_home_ce(usuario);
 
-            this.Hide();
-            Form frm = new v_home_ce(usuario);
 
-   
-            frm.ShowDialog();
-            this.Show();
+                frm.ShowDialog();
+                this.Show();
 
-           
-  
+            }
+            else
+            {
+                MessageBox.Show("No se encontro el usuario");
+            }
+
+
+
 
 
 

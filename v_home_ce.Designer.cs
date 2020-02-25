@@ -404,7 +404,7 @@
             this.pnl_incidente.Controls.Add(this.label9);
             this.pnl_incidente.Location = new System.Drawing.Point(99, 17);
             this.pnl_incidente.Name = "pnl_incidente";
-            this.pnl_incidente.Size = new System.Drawing.Size(451, 344);
+            this.pnl_incidente.Size = new System.Drawing.Size(638, 390);
             this.pnl_incidente.TabIndex = 2;
             this.pnl_incidente.Visible = false;
             this.pnl_incidente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_indicente_Paint);

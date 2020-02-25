@@ -15,11 +15,11 @@ namespace visitorApp
 
         public Database()
         {
-            myConnection = new SQLiteConnection("Data Source= visitorApp.sqlite3");
-            if(!File.Exists("./visitorApp.sqlite3"))
+            myConnection = new SQLiteConnection("Data Source=./visitorApp.sqlite3");
+            if(!File.Exists("visitorApp.sqlite3"))
             {
                 
-                SQLiteConnection.CreateFile("visitorApp.sqlite3");
+                //SQLiteConnection.CreateFile("visitorApp.sqlite3");
                 System.Console.WriteLine("cReado");
             }
             else
@@ -443,8 +443,6 @@ namespace visitorApp
 
             return res;
         }
-
-
 
         public System.Data.DataTable LlenarTabla(System.Data.DataTable table, string tipo, string[] fecha) 
         {
