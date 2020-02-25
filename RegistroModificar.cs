@@ -47,6 +47,8 @@ namespace visitorApp
 
         private void activarVisita(string id)
         {
+            Console.WriteLine("activarVisita");
+
             txt_visita_id.Text = id;
             
             //txt_visita.Enabled = false;

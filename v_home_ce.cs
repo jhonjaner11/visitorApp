@@ -22,11 +22,7 @@ namespace visitorApp
     {
 
         Database miDB = new Database();
-        //private bool ExistenDispositivos = false;
 
-        //private FilterInfoCollection DispositivosDeVideo;
-
-        //private VideoCaptureDevice FuenteDeVideo = null;
         private string foto_perfil = "img/perfil.png";
         private string path_foto = "";
         public string tipo = "";
@@ -45,6 +41,7 @@ namespace visitorApp
             int Height = screen.Bounds.Width;
 
             int Width = screen.Bounds.Height;
+            Console.WriteLine("heigth:" + Height + "  width:" + Width);
 
             this.pnl_v_home_ce.Width = Width;
             this.pnl_v_home_ce.Height = Height;
@@ -56,10 +53,6 @@ namespace visitorApp
             //BuscarDispositivos();
             btn_cam.Enabled = false;
             btn_nuevo.Enabled = false ;
-            
-         
-
-
 
         }
 

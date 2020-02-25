@@ -399,7 +399,7 @@ namespace visitorApp
 
         public string[] GetVisita(string id)
         {
-            string[] res = new string[5];
+            string[] res = new string[6];
             string query = "Select * from visita where id=" + id + "";
             OpenConnection();
             try
@@ -533,8 +533,10 @@ namespace visitorApp
                 }
                 else 
                 {
+                    OpenConnection();
                     SQLiteCommand comando = new SQLiteCommand(query, myConnection);
                     comando.ExecuteNonQuery();
+                    CloseConnection();
                     res = true;
                 }
                 
