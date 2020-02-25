@@ -58,6 +58,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_incidente = new System.Windows.Forms.Panel();
+            this.txt_aptos_i = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.btn_enviar_incidente = new System.Windows.Forms.Button();
             this.rtxt_desc = new System.Windows.Forms.RichTextBox();
             this.txt_fecha_i = new System.Windows.Forms.TextBox();
@@ -83,8 +85,6 @@
             this.btn_mostrar_visitas = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txt_aptos_i = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnl_visita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).BeginInit();
@@ -409,6 +409,22 @@
             this.pnl_incidente.Visible = false;
             this.pnl_incidente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_indicente_Paint);
             // 
+            // txt_aptos_i
+            // 
+            this.txt_aptos_i.Location = new System.Drawing.Point(28, 84);
+            this.txt_aptos_i.Name = "txt_aptos_i";
+            this.txt_aptos_i.Size = new System.Drawing.Size(140, 20);
+            this.txt_aptos_i.TabIndex = 19;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 68);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(139, 13);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Apartamentos Involucrados:";
+            // 
             // btn_enviar_incidente
             // 
             this.btn_enviar_incidente.Location = new System.Drawing.Point(192, 281);
@@ -466,9 +482,9 @@
             // 
             this.pnl_v_home_ce.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnl_v_home_ce.Controls.Add(this.panel1);
-            this.pnl_v_home_ce.Controls.Add(this.pnl_incidente);
             this.pnl_v_home_ce.Controls.Add(this.pnl_bbdd);
             this.pnl_v_home_ce.Controls.Add(this.pnl_visita);
+            this.pnl_v_home_ce.Controls.Add(this.pnl_incidente);
             this.pnl_v_home_ce.Location = new System.Drawing.Point(7, 7);
             this.pnl_v_home_ce.Name = "pnl_v_home_ce";
             this.pnl_v_home_ce.Size = new System.Drawing.Size(753, 429);
@@ -669,22 +685,6 @@
             this.label13.TabIndex = 2;
             this.label13.Text = "Exportar Datos";
             this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // txt_aptos_i
-            // 
-            this.txt_aptos_i.Location = new System.Drawing.Point(28, 84);
-            this.txt_aptos_i.Name = "txt_aptos_i";
-            this.txt_aptos_i.Size = new System.Drawing.Size(140, 20);
-            this.txt_aptos_i.TabIndex = 19;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 68);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(139, 13);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Apartamentos Involucrados:";
             // 
             // v_home_ce
             // 

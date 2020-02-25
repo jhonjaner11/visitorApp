@@ -15,19 +15,8 @@ namespace visitorApp
 
         public Database()
         {
-            myConnection = new SQLiteConnection("Data Source=./visitorApp.sqlite3");
-            if(!File.Exists("visitorApp.sqlite3"))
-            {
-                
-                //SQLiteConnection.CreateFile("visitorApp.sqlite3");
-                System.Console.WriteLine("cReado");
-            }
-            else
-            {
-                System.Console.WriteLine("ya fue creado");
-            }
-            
-       
+            myConnection = new SQLiteConnection("Data Source=bd/visitorApp.sqlite3");
+           
         }
 
         public void OpenConnection()
@@ -109,7 +98,7 @@ namespace visitorApp
 
         public bool ExistInVisita(string id)
         {
-            string query = "select * from visita where identificacion='"+id+"'";
+            string query = "select * from visita where persona='"+id+"'";
             bool res = false;
             OpenConnection();
             try
@@ -181,7 +170,7 @@ namespace visitorApp
           
 
             if (ExistPerson(id)){
-                string queryV = "insert into visita (identificacion, fecha, apto, vh, placa, usuario) values  ('";
+                string queryV = "insert into visita (persona, fecha, apto, vh, placa, usuario) values  ('";
                 string query2V = id + "','" +fecha + "','" + apto + "','" + vehiculo + "','" + placa + "'," + id_user + ")";
                 query = queryV + query2V;
             }
@@ -190,7 +179,7 @@ namespace visitorApp
                 string[] arrPersona = { id, nombre, tp_id, path_foto, telefono };
                 InsertPerson(arrPersona);
 
-                string queryB = "insert into visita (identificacion, fecha, apto, vh, placa, usuario) values  ('";
+                string queryB = "insert into visita (persona, fecha, apto, vh, placa, usuario) values  ('";
                 string query2B = id + "','" + fecha + "','" + apto + "','" + vehiculo + "','" + placa + "',"+id_user+")";
                 query = queryB + query2B;
             }
@@ -419,7 +408,7 @@ namespace visitorApp
                 SQLiteDataReader reader = sql.ExecuteReader();
                 if (reader.Read())
                 {
-                    res[0] = reader["identificacion"].ToString();
+                    res[0] = reader["persona"].ToString();
                     res[1] = reader["fecha"].ToString();
                     res[2] = reader["apto"].ToString();
                     res[3] = reader["vh"].ToString();
@@ -450,8 +439,8 @@ namespace visitorApp
             string queryTime;
             if (tipo=="visita")
             {
-                query = "select v.id, p.nombre as NombreVisita, v.identificacion, v.fecha, v.apto, v.vh, v.placa, u.nombre as usuario  ";
-                query = query + "from visita v left join persona p on v.identificacion = p.id ";
+                query = "select v.id, p.nombre as NombreVisita, v.persona, v.fecha, v.apto, v.vh, v.placa, u.nombre as usuario  ";
+                query = query + "from visita v left join persona p on v.persona = p.id ";
                 query = query + "left join usuario u on v.usuario = u.id ";
             }
             else if (tipo == "incidente")
@@ -688,12 +677,12 @@ namespace visitorApp
             string id = a[4];
 
             string query = "update visita set ";
-            query = query + " identificacion='" + id_visitante + "',";
+            query = query + " persona='" + id_visitante + "',";
             query = query + "apto='" + apto + "',";
             query = query + "vh='" + vh + "',";
             query = query + "placa='" + placa + "' ";
             query = query + " where id=" + id;
-            Console.WriteLine(query);
+            
 
 
             try

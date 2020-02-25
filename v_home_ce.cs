@@ -27,7 +27,7 @@ namespace visitorApp
         //private FilterInfoCollection DispositivosDeVideo;
 
         //private VideoCaptureDevice FuenteDeVideo = null;
-        private string foto_perfil = "perfil.png";
+        private string foto_perfil = "img/perfil.png";
         private string path_foto = "";
         public string tipo = "";
 
@@ -65,7 +65,7 @@ namespace visitorApp
 
         public void cargarComponentes(string perfil)
         {
-            if (perfil == "Admin")
+            if (perfil == "admin")
             {
                 btn_exportar.Visible = true;
             }
