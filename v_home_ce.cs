@@ -183,42 +183,26 @@ namespace visitorApp
             this.Close(); 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox_vehiculo.Checked)
             {
-                pnl_vehiculo.Visible = true;
+                //pnl_vehiculo.Visible = true;
+                lbl_placa.Visible = true;
+                lbl_tipo.Visible = true;
+                comboBox_tp_Vh.Visible = true;
+                txt_placa.Visible = true;
             }
             else
             {
-                pnl_vehiculo.Visible = false;
+                lbl_placa.Visible = false;
+                lbl_tipo.Visible = false;
+                comboBox_tp_Vh.Visible = false;
+                txt_placa.Visible = false;
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txt_numero_TextChanged(object sender, EventArgs e)
         {
@@ -236,11 +220,7 @@ namespace visitorApp
            
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void pnl_visita_Paint(object sender, PaintEventArgs e)
         {
             txt_fecha_v.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
@@ -248,21 +228,7 @@ namespace visitorApp
         }
 
         
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void pnl_indicente_Paint(object sender, PaintEventArgs e)
         {
@@ -272,6 +238,9 @@ namespace visitorApp
         private void btn_reg_visita_Click(object sender, EventArgs e)
         {
             pnl_visita.Visible = true;
+            
+            btn_reg_visita.BackColor=Color.DodgerBlue;
+            btn_reg_incidente.BackColor = Color.Transparent;
             pnl_incidente.Visible = false;
             pnl_bbdd.Visible = false;
             
@@ -288,12 +257,15 @@ namespace visitorApp
         {
             pnl_visita.Visible = false;
             pnl_bbdd.Visible = false;
+            btn_reg_incidente.BackColor = Color.DodgerBlue;
+            btn_reg_visita.BackColor = Color.Transparent;
             pnl_incidente.Visible = true;
        
         }
 
         private void v_home_ce_Load(object sender, EventArgs e)
         {
+            btn_reg_visita.PerformClick();
 
         }
         
@@ -436,11 +408,19 @@ namespace visitorApp
 
             if (chk_Box_filtro.Checked)
             {
-                pnl_filtro.Visible = true;
+                
+                lbl_f_final.Visible = true;
+                lbl_f_inicio.Visible = true;
+                time_inicio.Visible = true;
+                time_final.Visible = true;
+
             }
             else
             {
-                pnl_filtro.Visible = false;
+                lbl_f_final.Visible = false;
+                lbl_f_inicio.Visible = false;
+                time_inicio.Visible = false;
+                time_final.Visible = false;
             }
         }
 

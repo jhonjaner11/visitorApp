@@ -4,10 +4,10 @@ using System.Data.SQLite;
 using System.Windows.Forms;
 namespace visitorApp
 {
-    public partial class Login : Form
+    public partial class v_Login : Form
     {
         Database miDB = new Database();
-        public Login()
+        public v_Login()
         {
             InitializeComponent();
            
@@ -72,6 +72,11 @@ namespace visitorApp
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

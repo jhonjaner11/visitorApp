@@ -439,7 +439,7 @@ namespace visitorApp
             string queryTime;
             if (tipo=="visita")
             {
-                query = "select v.id, p.nombre as NombreVisita, v.persona, v.fecha, v.apto, v.vh, v.placa, u.nombre as usuario  ";
+                query = "select v.id, p.nombre as 'Nombre Visitante', v.persona, v.fecha, v.apto, v.vh, v.placa, u.nombre as usuario  ";
                 query = query + "from visita v left join persona p on v.persona = p.id ";
                 query = query + "left join usuario u on v.usuario = u.id ";
             }
