@@ -64,6 +64,7 @@
             this.btn_enviar_incidente.TabIndex = 25;
             this.btn_enviar_incidente.Text = "enviar";
             this.btn_enviar_incidente.UseVisualStyleBackColor = true;
+            this.btn_enviar_incidente.Click += new System.EventHandler(this.btn_enviar_incidente_Click_1);
             // 
             // rtxt_desc
             // 

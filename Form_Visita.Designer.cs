@@ -39,7 +39,6 @@
             this.lbl_tipo = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.txt_apto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_fecha_v = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pbFotoUser = new System.Windows.Forms.PictureBox();
+            this.btn_enviar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,15 +149,6 @@
             this.label5.TabIndex = 39;
             this.label5.Text = "Nombre:";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(699, 450);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 63);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "enviar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // txt_apto
             // 
             this.txt_apto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -207,6 +198,7 @@
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(217, 31);
             this.txt_id.TabIndex = 29;
+            this.txt_id.TextChanged += new System.EventHandler(this.txt_id_TextChanged);
             // 
             // checkBox_vehiculo
             // 
@@ -218,6 +210,7 @@
             this.checkBox_vehiculo.TabIndex = 28;
             this.checkBox_vehiculo.Text = "Vehiculo";
             this.checkBox_vehiculo.UseVisualStyleBackColor = true;
+            this.checkBox_vehiculo.CheckedChanged += new System.EventHandler(this.checkBox_vehiculo_CheckedChanged);
             // 
             // label4
             // 
@@ -260,11 +253,22 @@
             this.pbFotoUser.TabIndex = 36;
             this.pbFotoUser.TabStop = false;
             // 
+            // btn_enviar
+            // 
+            this.btn_enviar.Location = new System.Drawing.Point(763, 482);
+            this.btn_enviar.Name = "btn_enviar";
+            this.btn_enviar.Size = new System.Drawing.Size(75, 23);
+            this.btn_enviar.TabIndex = 41;
+            this.btn_enviar.Text = "Enviar";
+            this.btn_enviar.UseVisualStyleBackColor = true;
+            this.btn_enviar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form_Visita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 541);
+            this.Controls.Add(this.btn_enviar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_placa);
             this.Controls.Add(this.btn_cam);
@@ -275,7 +279,6 @@
             this.Controls.Add(this.lbl_tipo);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.pbFotoUser);
             this.Controls.Add(this.txt_apto);
             this.Controls.Add(this.label8);
@@ -289,7 +292,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Visita";
             this.Text = "Form_Visita";
-            this.Load += new System.EventHandler(this.Form_Visita_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -308,7 +311,7 @@
         private System.Windows.Forms.Label lbl_tipo;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        
         private System.Windows.Forms.PictureBox pbFotoUser;
         private System.Windows.Forms.TextBox txt_apto;
         private System.Windows.Forms.Label label8;
@@ -319,5 +322,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_enviar;
     }
 }

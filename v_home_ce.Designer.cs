@@ -71,7 +71,7 @@
             this.pnl_v_home_ce.Name = "pnl_v_home_ce";
             this.pnl_v_home_ce.Size = new System.Drawing.Size(1063, 630);
             this.pnl_v_home_ce.TabIndex = 3;
-            this.pnl_v_home_ce.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_v_home_ce_Paint);
+
             // 
             // pnl_contenedor
             // 

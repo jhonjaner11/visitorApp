@@ -24,6 +24,11 @@ namespace visitorApp
             txt_fecha_v.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             comboBox_id.SelectedIndex = 0;
             id_user = usuario;
+            btn_cam.Enabled = false;
+            txt_placa.Visible = false;
+            comboBox_tp_Vh.Visible = false;
+            lbl_placa.Visible = false;
+            lbl_tipo.Visible = false;
             
         }
 
@@ -39,7 +44,7 @@ namespace visitorApp
 
         public void autoLlenarPersona(string id, TextBox cjNombre, ComboBox cjTipoId, TextBox cjTelefono, PictureBox PathFoto)
         {
-            string path;
+          
             string[] res = miDB.GetOnlyPersona(id);
             Console.WriteLine(res);
             cjNombre.Text = res[0];
@@ -84,40 +89,8 @@ namespace visitorApp
             txt_telefono.Text = "";
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_vehiculo.Checked)
-            {
-                //pnl_vehiculo.Visible = true;
-                lbl_placa.Visible = true;
-                lbl_tipo.Visible = true;
-                comboBox_tp_Vh.Visible = true;
-                txt_placa.Visible = true;
-            }
-            else
-            {
-                lbl_placa.Visible = false;
-                lbl_tipo.Visible = false;
-                comboBox_tp_Vh.Visible = false;
-                txt_placa.Visible = false;
-            }
-        }
-
-        private void txt_numero_TextChanged(object sender, EventArgs e)
-        {
-
-            autoLlenarPersona(txt_id.Text, txt_nombre, comboBox_id, txt_telefono, pbFotoUser);
-            if (txt_id.Text != "")
-            {
-                btn_cam.Enabled = true;
-            }
-            else
-            {
-                btn_cam.Enabled = false;
-            }
 
 
-        }
 
         //verifica si el id, el nombre, o el apto estan en blanco
         //si alguno esta en blanco, devolvera false. 
@@ -146,34 +119,6 @@ namespace visitorApp
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (verificar())
-            {
-                string id = txt_id.Text;
-                string tp_id = comboBox_id.Text;
-                string nombre = txt_nombre.Text;
-                string apto = txt_apto.Text;
-                string vh = comboBox_tp_Vh.Text;
-                string placa = txt_placa.Text;
-                string fecha = txt_fecha_v.Text;
-                //Console.WriteLine(id_user);
-
-
-                string telefono = txt_telefono.Text;
-                string[] arrVisita = { id, tp_id, nombre, apto, vh, placa, fecha, path_foto, telefono, id_user };
-
-                Console.WriteLine("entra insert visita");
-                Boolean resultado = miDB.InsertVisita(arrVisita);
-
-                Console.WriteLine(resultado);
-
-                Console.WriteLine("ddbb close insert visita");
-                limpiar_pnl_visita();
-                MessageBox.Show("Visita registrada");
-            }
-            else
-            {
-                MessageBox.Show("Faltan Datos por llenar");
-            }
 
 
 
@@ -211,9 +156,73 @@ namespace visitorApp
 
 
 
-        private void Form_Visita_Load(object sender, EventArgs e)
+        private void txt_id_TextChanged(object sender, EventArgs e)
         {
 
+
+            autoLlenarPersona(txt_id.Text, txt_nombre, comboBox_id, txt_telefono, pbFotoUser);
+            if (txt_id.Text != "")
+            {
+                btn_cam.Enabled = true;
+            }
+            else
+            {
+                btn_cam.Enabled = false;
+            }
+
+        }
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (verificar())
+            {
+                string id = txt_id.Text;
+                string tp_id = comboBox_id.Text;
+                string nombre = txt_nombre.Text;
+                string apto = txt_apto.Text;
+                string vh = comboBox_tp_Vh.Text;
+                string placa = txt_placa.Text;
+                string fecha = txt_fecha_v.Text;
+                //Console.WriteLine(id_user);
+
+
+                string telefono = txt_telefono.Text;
+                string[] arrVisita = { id, tp_id, nombre, apto, vh, placa, fecha, path_foto, telefono, id_user };
+
+                Console.WriteLine("entra insert visita");
+                Boolean resultado = miDB.InsertVisita(arrVisita);
+
+                Console.WriteLine(resultado);
+
+                Console.WriteLine("ddbb close insert visita");
+                limpiar_pnl_visita();
+                MessageBox.Show("Visita registrada");
+            }
+            else
+            {
+                MessageBox.Show("Faltan Datos por llenar");
+            }
+        }
+
+        private void checkBox_vehiculo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_vehiculo.Checked)
+            {
+                //pnl_vehiculo.Visible = true;
+                lbl_placa.Visible = true;
+                lbl_tipo.Visible = true;
+                comboBox_tp_Vh.Visible = true;
+                txt_placa.Visible = true;
+            }
+            else
+            {
+                lbl_placa.Visible = false;
+                lbl_tipo.Visible = false;
+                comboBox_tp_Vh.Visible = false;
+                txt_placa.Visible = false;
+            }
         }
     }
 }

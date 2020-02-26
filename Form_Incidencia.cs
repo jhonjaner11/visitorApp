@@ -23,7 +23,9 @@ namespace visitorApp
         }
 
 
-        private void btn_enviar_incidente_Click(object sender, EventArgs e)
+
+
+        private void btn_enviar_incidente_Click_1(object sender, EventArgs e)
         {
             string fecha = txt_fecha_i.Text;
             string desc = rtxt_desc.Text;
@@ -41,7 +43,6 @@ namespace visitorApp
             {
                 MessageBox.Show("Error registrando incidente");
             }
-
 
         }
 

@@ -477,10 +477,9 @@ namespace visitorApp
             SQLiteCommand comand = new SQLiteCommand(query+queryTime, myConnection);
             SQLiteDataAdapter adapter = new SQLiteDataAdapter();
             adapter.SelectCommand = (comand);
-            //DataTable table = new DataTable();
             adapter.Fill(table);
             return table;
-            //DataGrid.DataSource = table;
+
         }
 
         public bool DeleteRegistro(string id, string tipo)
