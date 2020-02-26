@@ -56,23 +56,23 @@
             // 
             this.txt_login.BackColor = System.Drawing.SystemColors.WindowText;
             this.txt_login.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_login.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_login.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_login.ForeColor = System.Drawing.SystemColors.Window;
-            this.txt_login.Location = new System.Drawing.Point(100, 147);
+            this.txt_login.Location = new System.Drawing.Point(97, 176);
             this.txt_login.Name = "txt_login";
-            this.txt_login.Size = new System.Drawing.Size(216, 32);
+            this.txt_login.Size = new System.Drawing.Size(216, 30);
             this.txt_login.TabIndex = 2;
             // 
             // txt_contraseña
             // 
             this.txt_contraseña.BackColor = System.Drawing.SystemColors.WindowText;
             this.txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_contraseña.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contraseña.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_contraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.txt_contraseña.Location = new System.Drawing.Point(100, 194);
+            this.txt_contraseña.Location = new System.Drawing.Point(96, 223);
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.PasswordChar = '*';
-            this.txt_contraseña.Size = new System.Drawing.Size(216, 32);
+            this.txt_contraseña.Size = new System.Drawing.Size(216, 30);
             this.txt_contraseña.TabIndex = 3;
             // 
             // btn_ingresar
@@ -84,7 +84,7 @@
             this.btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ingresar.Font = new System.Drawing.Font("Montserrat Thin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ingresar.ForeColor = System.Drawing.Color.White;
-            this.btn_ingresar.Location = new System.Drawing.Point(49, 253);
+            this.btn_ingresar.Location = new System.Drawing.Point(44, 282);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(267, 46);
             this.btn_ingresar.TabIndex = 4;
@@ -137,7 +137,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(174, 458);
+            this.linkLabel1.Location = new System.Drawing.Point(168, 458);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(142, 18);
             this.linkLabel1.TabIndex = 11;
@@ -151,17 +151,17 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(65, 458);
+            this.label3.Location = new System.Drawing.Point(45, 458);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 18);
+            this.label3.Size = new System.Drawing.Size(131, 18);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Copyright 2020 | ";
+            this.label3.Text = "Copyright 2020 © | ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(93, 167);
+            this.label1.Location = new System.Drawing.Point(93, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 13);
             this.label1.TabIndex = 8;
@@ -171,7 +171,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(93, 214);
+            this.label2.Location = new System.Drawing.Point(93, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(223, 13);
             this.label2.TabIndex = 9;
@@ -180,7 +180,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::visitorApp.Properties.Resources.wolf_software300;
-            this.pictureBox4.Location = new System.Drawing.Point(33, 13);
+            this.pictureBox4.Location = new System.Drawing.Point(27, 13);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(300, 128);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +190,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::visitorApp.Properties.Resources.login_pass;
-            this.pictureBox2.Location = new System.Drawing.Point(49, 194);
+            this.pictureBox2.Location = new System.Drawing.Point(49, 223);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +202,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 147);
+            this.pictureBox1.Location = new System.Drawing.Point(49, 176);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
