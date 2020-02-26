@@ -212,6 +212,8 @@
     <None Include="bin\Debug\img\AAA..png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\img\logo300.png" />
+    <None Include="bin\Debug\iconos\login-pass.png" />
     <None Include="bin\Debug\iconos\registro-incidente-icon128.png" />
     <None Include="bin\Debug\iconos\visitante-icon128.png" />
     <None Include="bin\Debug\iconos\visitante-icon.png" />

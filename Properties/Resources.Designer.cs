@@ -83,6 +83,26 @@ namespace visitorApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_pass {
+            get {
+                object obj = ResourceManager.GetObject("login-pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo300 {
+            get {
+                object obj = ResourceManager.GetObject("logo300", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap registro_incidente_icon128 {
             get {
                 object obj = ResourceManager.GetObject("registro-incidente-icon128", resourceCulture);
