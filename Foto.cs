@@ -25,7 +25,7 @@ namespace visitorApp
         private FilterInfoCollection DispositivosDeVideo;
 
         private VideoCaptureDevice FuenteDeVideo = null;
-        private string foto_perfil = "perfil.png";
+
         private string path = "bodega/";
         private string foto ="";
         public Foto(string ids)

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_f_final = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
             this.lbl_f_inicio = new System.Windows.Forms.Label();
             this.time_final = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.time_inicio = new System.Windows.Forms.DateTimePicker();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_usuarios = new System.Windows.Forms.Button();
@@ -45,6 +45,7 @@
             this.btn_mostrar_visitas = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btn_export = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,14 +59,15 @@
             this.lbl_f_final.TabIndex = 26;
             this.lbl_f_final.Text = "Fecha Final:";
             // 
-            // button4
+            // btn_modificar
             // 
-            this.button4.Location = new System.Drawing.Point(919, 262);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 63);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "Modificar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_modificar.Location = new System.Drawing.Point(919, 262);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(90, 63);
+            this.btn_modificar.TabIndex = 33;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // lbl_f_inicio
             // 
@@ -87,14 +89,15 @@
             this.time_final.Size = new System.Drawing.Size(153, 31);
             this.time_final.TabIndex = 24;
             // 
-            // button1
+            // btn_eliminar
             // 
-            this.button1.Location = new System.Drawing.Point(919, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 63);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Location = new System.Drawing.Point(919, 331);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(90, 63);
+            this.btn_eliminar.TabIndex = 32;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.button1_Click);
             // 
             // time_inicio
             // 
@@ -115,6 +118,7 @@
             this.btn_nuevo.TabIndex = 31;
             this.btn_nuevo.Text = "Nuevo";
             this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_usuarios
             // 
@@ -124,6 +128,7 @@
             this.btn_usuarios.TabIndex = 30;
             this.btn_usuarios.Text = "Usuarios";
             this.btn_usuarios.UseVisualStyleBackColor = true;
+            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click_1);
             // 
             // button3
             // 
@@ -133,29 +138,36 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "Personas";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dt
             // 
+            this.dt.AllowUserToAddRows = false;
+            this.dt.AllowUserToDeleteRows = false;
             this.dt.AllowUserToOrderColumns = true;
+            this.dt.AllowUserToResizeRows = false;
             this.dt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dt.CausesValidation = false;
+            this.dt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dt.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dt.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dt.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.dt.Location = new System.Drawing.Point(21, 232);
             this.dt.MultiSelect = false;
             this.dt.Name = "dt";
@@ -165,6 +177,7 @@
             this.dt.ShowEditingIcon = false;
             this.dt.Size = new System.Drawing.Size(873, 179);
             this.dt.TabIndex = 28;
+            this.dt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_CellClick);
             // 
             // chk_Box_filtro
             // 
@@ -176,6 +189,7 @@
             this.chk_Box_filtro.TabIndex = 27;
             this.chk_Box_filtro.Text = "filtro";
             this.chk_Box_filtro.UseVisualStyleBackColor = true;
+            this.chk_Box_filtro.CheckedChanged += new System.EventHandler(this.chk_Box_filtro_CheckedChanged_1);
             // 
             // btn_mostrar_incidentes
             // 
@@ -185,6 +199,7 @@
             this.btn_mostrar_incidentes.TabIndex = 22;
             this.btn_mostrar_incidentes.Text = "Incidentes";
             this.btn_mostrar_incidentes.UseVisualStyleBackColor = true;
+            this.btn_mostrar_incidentes.Click += new System.EventHandler(this.btn_mostrar_incidentes_Click);
             // 
             // btn_mostrar_visitas
             // 
@@ -194,6 +209,7 @@
             this.btn_mostrar_visitas.TabIndex = 21;
             this.btn_mostrar_visitas.Text = "Visitas";
             this.btn_mostrar_visitas.UseVisualStyleBackColor = true;
+            this.btn_mostrar_visitas.Click += new System.EventHandler(this.btn_mostrar_visitas_Click);
             // 
             // label14
             // 
@@ -217,16 +233,27 @@
             this.label13.TabIndex = 19;
             this.label13.Text = "Exportar Datos";
             // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(396, 434);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(75, 23);
+            this.btn_export.TabIndex = 34;
+            this.btn_export.Text = "Exportar";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click_1);
+            // 
             // Form_bbdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 443);
+            this.ClientSize = new System.Drawing.Size(1031, 662);
+            this.Controls.Add(this.btn_export);
             this.Controls.Add(this.lbl_f_final);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.lbl_f_inicio);
             this.Controls.Add(this.time_final);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.time_inicio);
             this.Controls.Add(this.btn_nuevo);
             this.Controls.Add(this.btn_usuarios);
@@ -240,7 +267,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_bbdd";
             this.Text = "Form_bbdd";
-            this.Load += new System.EventHandler(this.Form_bbdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -250,10 +276,10 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_f_final;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Label lbl_f_inicio;
         private System.Windows.Forms.DateTimePicker time_final;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.DateTimePicker time_inicio;
         private System.Windows.Forms.Button btn_nuevo;
         private System.Windows.Forms.Button btn_usuarios;
@@ -264,5 +290,6 @@
         private System.Windows.Forms.Button btn_mostrar_visitas;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btn_export;
     }
 }
