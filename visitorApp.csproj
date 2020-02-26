@@ -93,6 +93,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="Form_bbdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_bbdd.Designer.cs">
+      <DependentUpon>Form_bbdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Incidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Incidencia.Designer.cs">
+      <DependentUpon>Form_Incidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Visita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Visita.Designer.cs">
+      <DependentUpon>Form_Visita.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroModificar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +143,15 @@
     <Compile Include="v_home_ce.Designer.cs">
       <DependentUpon>v_home_ce.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_bbdd.resx">
+      <DependentUpon>Form_bbdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Incidencia.resx">
+      <DependentUpon>Form_Incidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Visita.resx">
+      <DependentUpon>Form_Visita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Foto.resx">
       <DependentUpon>Foto.cs</DependentUpon>
     </EmbeddedResource>
