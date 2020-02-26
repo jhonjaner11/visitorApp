@@ -24,6 +24,7 @@ namespace visitorApp
             lbl_f_inicio.Visible = false;
             time_inicio.Visible = false;
             time_final.Visible = false;
+            btn_modificar.Enabled = false;
 
         }
 
@@ -88,6 +89,7 @@ namespace visitorApp
         //pnl bbdd
         public void MostrarTabla(string tipo)
         {
+            btn_modificar.Enabled = false;
             string time_ini;
             string time_fin;
             string[] arrfecha;
@@ -180,7 +182,7 @@ namespace visitorApp
 
         private void dt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Console.WriteLine("hola:");
+            btn_modificar.Enabled = true;
             if (tipo == "usuario")
             {
                 id_eliminar = dt.Rows[e.RowIndex].Cells["id"].Value.ToString();

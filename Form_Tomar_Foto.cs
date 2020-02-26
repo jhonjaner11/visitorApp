@@ -17,7 +17,7 @@ using System.Drawing.Imaging;
 
 namespace visitorApp
 {
-    public partial class Foto : Form
+    public partial class Form_Tomar_Foto : Form
     {
         private string id;
         private bool ExistenDispositivos = false;
@@ -28,7 +28,7 @@ namespace visitorApp
 
         private string path = "bodega/";
         private string foto ="";
-        public Foto(string ids)
+        public Form_Tomar_Foto(string ids)
         {
             InitializeComponent();
             id = ids;
@@ -204,6 +204,7 @@ namespace visitorApp
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
+            inicio_cam();
             this.Close();
         }
     }

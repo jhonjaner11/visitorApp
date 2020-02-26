@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -138,11 +139,20 @@ namespace visitorApp
             //this.Hide();
             pbFotoUser.Image = Image.FromFile(foto_perfil);
             string id = txt_id.Text;
-            Form frm = new Foto(id);
+            Form frm = new Form_Tomar_Foto(id);
             frm.ShowDialog();
             path_foto = "bodega/" + id + ".png";
+            if (File.Exists(path_foto))
+            {
+                pbFotoUser.Image = Image.FromFile(path_foto);
+            }
+            else
+            {
+                pbFotoUser.Image = Image.FromFile(foto_perfil);
+            }
+            
 
-            pbFotoUser.Image = Image.FromFile(path_foto);
+            
             //this.Show();
 
             //string id = txt_id.Text;

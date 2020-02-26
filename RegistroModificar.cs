@@ -287,5 +287,10 @@ namespace visitorApp
                 Console.WriteLine("error: " + ae);
             }
         }
+
+        private void btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
