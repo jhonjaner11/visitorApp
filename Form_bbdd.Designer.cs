@@ -46,6 +46,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btn_export = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(919, 262);
+            this.btn_modificar.Location = new System.Drawing.Point(804, 301);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(90, 63);
             this.btn_modificar.TabIndex = 33;
@@ -91,7 +92,7 @@
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(919, 331);
+            this.btn_eliminar.Location = new System.Drawing.Point(804, 370);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(90, 63);
             this.btn_eliminar.TabIndex = 32;
@@ -112,7 +113,7 @@
             // 
             // btn_nuevo
             // 
-            this.btn_nuevo.Location = new System.Drawing.Point(919, 184);
+            this.btn_nuevo.Location = new System.Drawing.Point(789, 232);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(90, 63);
             this.btn_nuevo.TabIndex = 31;
@@ -162,7 +163,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -175,7 +176,7 @@
             this.dt.RowHeadersVisible = false;
             this.dt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dt.ShowEditingIcon = false;
-            this.dt.Size = new System.Drawing.Size(873, 179);
+            this.dt.Size = new System.Drawing.Size(668, 179);
             this.dt.TabIndex = 28;
             this.dt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_CellClick);
             // 
@@ -243,11 +244,27 @@
             this.btn_export.UseVisualStyleBackColor = true;
             this.btn_export.Click += new System.EventHandler(this.btn_export_Click_1);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(950, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 43);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form_bbdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1031, 662);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_export);
             this.Controls.Add(this.lbl_f_final);
             this.Controls.Add(this.btn_modificar);
@@ -264,6 +281,8 @@
             this.Controls.Add(this.btn_mostrar_visitas);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_bbdd";
             this.Text = "Form_bbdd";
@@ -291,5 +310,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btn_export;
+        private System.Windows.Forms.Button button1;
     }
 }

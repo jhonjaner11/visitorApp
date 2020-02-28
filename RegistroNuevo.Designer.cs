@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.pnl_usuario = new System.Windows.Forms.Panel();
-            this.btn_nuevo_usuario = new System.Windows.Forms.Button();
-            this.cbx_cargo = new System.Windows.Forms.ComboBox();
-            this.txt_contraseña_u = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_nombre_u = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_login_u = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnl_persona = new System.Windows.Forms.Panel();
             this.btn_nuevo_persona = new System.Windows.Forms.Button();
             this.cbx_tipoid_p = new System.Windows.Forms.ComboBox();
@@ -50,6 +40,16 @@
             this.txt_id_p = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btn_nuevo_usuario = new System.Windows.Forms.Button();
+            this.cbx_cargo = new System.Windows.Forms.ComboBox();
+            this.txt_contraseña_u = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_nombre_u = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_login_u = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_Cerrar = new System.Windows.Forms.Button();
             this.pnl_usuario.SuspendLayout();
             this.pnl_persona.SuspendLayout();
@@ -73,93 +73,6 @@
             this.pnl_usuario.Size = new System.Drawing.Size(307, 220);
             this.pnl_usuario.TabIndex = 0;
             this.pnl_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btn_nuevo_usuario
-            // 
-            this.btn_nuevo_usuario.Location = new System.Drawing.Point(118, 164);
-            this.btn_nuevo_usuario.Name = "btn_nuevo_usuario";
-            this.btn_nuevo_usuario.Size = new System.Drawing.Size(75, 23);
-            this.btn_nuevo_usuario.TabIndex = 12;
-            this.btn_nuevo_usuario.Text = "Crear";
-            this.btn_nuevo_usuario.UseVisualStyleBackColor = true;
-            this.btn_nuevo_usuario.Click += new System.EventHandler(this.btn_nuevo_usuario_Click);
-            // 
-            // cbx_cargo
-            // 
-            this.cbx_cargo.FormattingEnabled = true;
-            this.cbx_cargo.Items.AddRange(new object[] {
-            "Celador",
-            "Admin"});
-            this.cbx_cargo.Location = new System.Drawing.Point(178, 68);
-            this.cbx_cargo.Name = "cbx_cargo";
-            this.cbx_cargo.Size = new System.Drawing.Size(100, 21);
-            this.cbx_cargo.TabIndex = 11;
-            // 
-            // txt_contraseña_u
-            // 
-            this.txt_contraseña_u.Location = new System.Drawing.Point(178, 123);
-            this.txt_contraseña_u.Name = "txt_contraseña_u";
-            this.txt_contraseña_u.Size = new System.Drawing.Size(100, 20);
-            this.txt_contraseña_u.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(166, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Contraseña:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Cargo:";
-            // 
-            // txt_nombre_u
-            // 
-            this.txt_nombre_u.Location = new System.Drawing.Point(37, 123);
-            this.txt_nombre_u.Name = "txt_nombre_u";
-            this.txt_nombre_u.Size = new System.Drawing.Size(100, 20);
-            this.txt_nombre_u.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nombre:";
-            // 
-            // txt_login_u
-            // 
-            this.txt_login_u.Location = new System.Drawing.Point(37, 68);
-            this.txt_login_u.Name = "txt_login_u";
-            this.txt_login_u.Size = new System.Drawing.Size(100, 20);
-            this.txt_login_u.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Login:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nuevo Usuario";
             // 
             // pnl_persona
             // 
@@ -267,6 +180,93 @@
             this.label10.Text = "Nueva Persona";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // btn_nuevo_usuario
+            // 
+            this.btn_nuevo_usuario.Location = new System.Drawing.Point(118, 164);
+            this.btn_nuevo_usuario.Name = "btn_nuevo_usuario";
+            this.btn_nuevo_usuario.Size = new System.Drawing.Size(75, 23);
+            this.btn_nuevo_usuario.TabIndex = 12;
+            this.btn_nuevo_usuario.Text = "Crear";
+            this.btn_nuevo_usuario.UseVisualStyleBackColor = true;
+            this.btn_nuevo_usuario.Click += new System.EventHandler(this.btn_nuevo_usuario_Click);
+            // 
+            // cbx_cargo
+            // 
+            this.cbx_cargo.FormattingEnabled = true;
+            this.cbx_cargo.Items.AddRange(new object[] {
+            "Celador",
+            "Admin"});
+            this.cbx_cargo.Location = new System.Drawing.Point(178, 68);
+            this.cbx_cargo.Name = "cbx_cargo";
+            this.cbx_cargo.Size = new System.Drawing.Size(100, 21);
+            this.cbx_cargo.TabIndex = 11;
+            // 
+            // txt_contraseña_u
+            // 
+            this.txt_contraseña_u.Location = new System.Drawing.Point(178, 123);
+            this.txt_contraseña_u.Name = "txt_contraseña_u";
+            this.txt_contraseña_u.Size = new System.Drawing.Size(100, 20);
+            this.txt_contraseña_u.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(166, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Contraseña:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(166, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Cargo:";
+            // 
+            // txt_nombre_u
+            // 
+            this.txt_nombre_u.Location = new System.Drawing.Point(37, 123);
+            this.txt_nombre_u.Name = "txt_nombre_u";
+            this.txt_nombre_u.Size = new System.Drawing.Size(100, 20);
+            this.txt_nombre_u.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(25, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nombre:";
+            // 
+            // txt_login_u
+            // 
+            this.txt_login_u.Location = new System.Drawing.Point(37, 68);
+            this.txt_login_u.Name = "txt_login_u";
+            this.txt_login_u.Size = new System.Drawing.Size(100, 20);
+            this.txt_login_u.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Login:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nuevo Usuario";
+            // 
             // btn_Cerrar
             // 
             this.btn_Cerrar.BackColor = System.Drawing.Color.Transparent;
@@ -293,6 +293,7 @@
             this.ClientSize = new System.Drawing.Size(400, 295);
             this.Controls.Add(this.btn_Cerrar);
             this.Controls.Add(this.pnl_usuario);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistroNuevo";
             this.Text = "Nuevo";

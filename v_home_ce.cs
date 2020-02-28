@@ -27,7 +27,8 @@ namespace visitorApp
         private string[] user;
         private string id_user;
 
-        public v_home_ce(string[] userIn)
+        //string[] userIn meter en home ce 
+        public v_home_ce()
         {
             InitializeComponent();
             Screen screen = Screen.PrimaryScreen;
@@ -39,9 +40,11 @@ namespace visitorApp
 
             this.pnl_v_home_ce.Width = Width;
             this.pnl_v_home_ce.Height = Height;
-            user = userIn;
-            perfil = user[3];
-            id_user = user[6];
+            //user = userIn;
+            //perfil = user[3];
+            //id_user = user[6];
+            perfil = "admin";
+            id_user = "2";
             cargarComponentes(perfil);
 
         }
@@ -50,6 +53,8 @@ namespace visitorApp
         {
             if (this.pnl_contenedor.Controls.Count > 0)
             {
+                Console.Write("Paneles a eliminar:");
+                Console.WriteLine(this.pnl_contenedor.Controls.Count);
                 this.pnl_contenedor.Controls.RemoveAt(0);
             }
             Form fh = formhija as Form;
@@ -80,8 +85,13 @@ namespace visitorApp
         private void btn_reg_visita_Click(object sender, EventArgs e)
         {
 
-            btn_reg_visita.BackColor=Color.DodgerBlue;
+            btn_reg_visita.BackColor=Color.Black;
             btn_reg_incidente.BackColor = Color.Transparent;
+            btn_exportar.BackColor = Color.Transparent;
+
+            btn_reg_visita.Enabled = false;
+            btn_reg_incidente.Enabled = true;
+            btn_exportar.Enabled = true;
 
             AbrirFormHija(new Form_Visita(id_user)) ;
 
@@ -92,8 +102,14 @@ namespace visitorApp
 
         private void btn_reg_incidente_Click(object sender, EventArgs e)
         {
-            btn_reg_incidente.BackColor = Color.DodgerBlue;
+            btn_reg_incidente.BackColor = Color.Black;
             btn_reg_visita.BackColor = Color.Transparent;
+            btn_exportar.BackColor = Color.Transparent;
+
+            btn_reg_visita.Enabled = true;
+            btn_reg_incidente.Enabled = false;
+            btn_exportar.Enabled = true;
+
             AbrirFormHija(new Form_Incidencia(id_user));
 
         }
@@ -106,6 +122,14 @@ namespace visitorApp
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            btn_reg_incidente.BackColor = Color.Transparent;
+            btn_reg_visita.BackColor = Color.Transparent;
+            btn_exportar.BackColor = Color.Black;
+
+            btn_reg_visita.Enabled = true;
+            btn_reg_incidente.Enabled = true;
+            btn_exportar.Enabled = false;
+
             AbrirFormHija(new Form_bbdd());
 
 

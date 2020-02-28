@@ -118,40 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="visitante-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\iconos\visitante-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="registro-incidente-icon128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\iconos\registro-incidente-icon128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AAA." type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\img\AAA..png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login-pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\iconos\login-pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo300" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\img\logo300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="visitante-icon128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\iconos\visitante-icon128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wolf-software300" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\wolf-software300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wolf-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\img\wolf-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="building2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\img\building2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iniciar-sesionB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\iniciar-sesionB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login-pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\login-pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AAA." type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\AAA..png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salir-icon128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\salir-icon128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="base-datos-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\base-datos-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="visitante-icon64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\visitante-icon64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="visitante-icon128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\visitante-icon128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wolf-software120" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\img\wolf-software120.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="building" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\img\building.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\img\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wolf-software300" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\img\wolf-software300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="registro-incidente-icon128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\registro-incidente-icon128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\building2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo300" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\logo300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\building.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salir-icon64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\salir-icon64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salir-icon32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\salir-icon32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="visitante-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\visitante-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="registro-incidente-icon64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\registro-incidente-icon64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="base-datos-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\base-datos-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

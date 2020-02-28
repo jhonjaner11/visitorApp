@@ -7,6 +7,7 @@ namespace visitorApp
     public partial class v_Login : Form
     {
         Database miDB = new Database();
+        public int xClick = 0, yClick = 0;
         public v_Login()
         {
             InitializeComponent();
@@ -45,9 +46,8 @@ namespace visitorApp
             if (us != "Errado")
             {
                 this.Hide();
-                Form frm = new v_home_ce(usuario);
-
-
+                //metale el usuario
+                Form frm = new v_home_ce();
                 frm.ShowDialog();
                 this.Show();
 
@@ -77,6 +77,20 @@ namespace visitorApp
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void v_Login_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                xClick = e.X;
+                yClick = e.Y;
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - xClick);
+                this.Top = this.Top + (e.Y - yClick);
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

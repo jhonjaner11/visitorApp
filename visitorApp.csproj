@@ -105,6 +105,12 @@
     <Compile Include="Form_Incidencia.Designer.cs">
       <DependentUpon>Form_Incidencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Tomar_Foto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tomar_Foto.Designer.cs">
+      <DependentUpon>Form_Tomar_Foto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Visita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,12 +128,6 @@
     </Compile>
     <Compile Include="RegistroNuevo.Designer.cs">
       <DependentUpon>RegistroNuevo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Foto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Foto.Designer.cs">
-      <DependentUpon>Foto.cs</DependentUpon>
     </Compile>
     <Compile Include="v_Login.cs">
       <SubType>Form</SubType>
@@ -149,11 +149,11 @@
     <EmbeddedResource Include="Form_Incidencia.resx">
       <DependentUpon>Form_Incidencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tomar_Foto.resx">
+      <DependentUpon>Form_Tomar_Foto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Visita.resx">
       <DependentUpon>Form_Visita.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Foto.resx">
-      <DependentUpon>Foto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="v_Login.resx">
       <DependentUpon>v_Login.cs</DependentUpon>
@@ -244,6 +244,15 @@
     <None Include="bin\Debug\iconos\registro-incidente-icon128.png" />
     <None Include="bin\Debug\iconos\visitante-icon128.png" />
     <None Include="bin\Debug\iconos\visitante-icon.png" />
+    <None Include="bin\Debug\iconos\pass.png" />
+    <None Include="bin\Debug\iconos\iniciar-sesionB.png" />
+    <None Include="bin\Debug\iconos\base-datos-128.png" />
+    <None Include="bin\Debug\iconos\salir-icon128.png" />
+    <None Include="bin\Debug\iconos\salir-icon32.png" />
+    <None Include="bin\Debug\iconos\salir-icon64.png" />
+    <None Include="bin\Debug\iconos\visitante-icon64.png" />
+    <None Include="bin\Debug\iconos\registro-incidente-icon64.png" />
+    <None Include="bin\Debug\iconos\base-datos-64.png" />
     <Content Include="bin\Debug\img\fondo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

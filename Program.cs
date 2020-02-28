@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace visitorApp
 {
+    
     static class Program
     {
         /// <summary>
@@ -14,9 +15,10 @@ namespace visitorApp
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new v_Login());
+            Application.Run(new v_home_ce());
         }
     }
 }

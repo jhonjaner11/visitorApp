@@ -98,6 +98,7 @@
             this.Controls.Add(this.cboDispositivos);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.btnIniciar);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Tomar_Foto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

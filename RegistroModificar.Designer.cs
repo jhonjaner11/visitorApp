@@ -556,6 +556,7 @@
             this.Controls.Add(this.pnl_incidente);
             this.Controls.Add(this.pnl_persona);
             this.Controls.Add(this.pnl_usuario);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistroModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

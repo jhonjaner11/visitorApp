@@ -234,5 +234,10 @@ namespace visitorApp
                 txt_placa.Visible = false;
             }
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

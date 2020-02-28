@@ -34,13 +34,13 @@
             this.btn_ingresar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Cerrar = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -56,39 +56,26 @@
             // 
             this.txt_login.BackColor = System.Drawing.SystemColors.WindowText;
             this.txt_login.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_login.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txt_login, "txt_login");
             this.txt_login.ForeColor = System.Drawing.SystemColors.Window;
-            this.txt_login.Location = new System.Drawing.Point(97, 176);
             this.txt_login.Name = "txt_login";
-            this.txt_login.Size = new System.Drawing.Size(216, 30);
-            this.txt_login.TabIndex = 2;
             // 
             // txt_contraseña
             // 
             this.txt_contraseña.BackColor = System.Drawing.SystemColors.WindowText;
             this.txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_contraseña.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txt_contraseña, "txt_contraseña");
             this.txt_contraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.txt_contraseña.Location = new System.Drawing.Point(96, 223);
             this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.PasswordChar = '*';
-            this.txt_contraseña.Size = new System.Drawing.Size(216, 30);
-            this.txt_contraseña.TabIndex = 3;
             // 
             // btn_ingresar
             // 
             this.btn_ingresar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ingresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            resources.ApplyResources(this.btn_ingresar, "btn_ingresar");
             this.btn_ingresar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_ingresar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ingresar.Font = new System.Drawing.Font("Montserrat Thin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ingresar.ForeColor = System.Drawing.Color.White;
-            this.btn_ingresar.Location = new System.Drawing.Point(44, 282);
             this.btn_ingresar.Name = "btn_ingresar";
-            this.btn_ingresar.Size = new System.Drawing.Size(267, 46);
-            this.btn_ingresar.TabIndex = 4;
-            this.btn_ingresar.Text = "INICIAR SESIÓN";
             this.btn_ingresar.UseVisualStyleBackColor = false;
             this.btn_ingresar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -107,156 +94,108 @@
             this.panel1.Controls.Add(this.txt_contraseña);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(355, -1);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 486);
-            this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_Cerrar
             // 
             this.btn_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            resources.ApplyResources(this.btn_Cerrar, "btn_Cerrar");
             this.btn_Cerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cerrar.FlatAppearance.BorderSize = 0;
             this.btn_Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
             this.btn_Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cerrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Cerrar.Location = new System.Drawing.Point(328, 0);
             this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(29, 32);
-            this.btn_Cerrar.TabIndex = 7;
-            this.btn_Cerrar.Text = "X";
             this.btn_Cerrar.UseVisualStyleBackColor = false;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::visitorApp.Properties.Resources.wolf_software300;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(168, 458);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(142, 18);
-            this.linkLabel1.TabIndex = 11;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Assistance Team SAS";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.White;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(45, 458);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 18);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Copyright 2020 © | ";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(93, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "____________________________________";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(93, 243);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "____________________________________";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::visitorApp.Properties.Resources.wolf_software300;
-            this.pictureBox4.Location = new System.Drawing.Point(27, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(300, 128);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::visitorApp.Properties.Resources.login_pass;
-            this.pictureBox2.Location = new System.Drawing.Point(49, 223);
+            this.pictureBox2.Image = global::visitorApp.Properties.Resources.pass;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 176);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::visitorApp.Properties.Resources.iniciar_sesionB;
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Name = "label2";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::visitorApp.Properties.Resources.building2;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 235);
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(354, 272);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
             // panel3
             // 
             this.panel3.BackgroundImage = global::visitorApp.Properties.Resources.fondo;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.panel2);
-            this.panel3.Location = new System.Drawing.Point(0, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(642, 486);
-            this.panel3.TabIndex = 8;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::visitorApp.Properties.Resources.logo300;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(108, 429);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(137, 47);
-            this.panel2.TabIndex = 0;
             // 
             // v_Login
             // 
             this.AcceptButton = this.btn_ingresar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_Cerrar;
-            this.ClientSize = new System.Drawing.Size(711, 484);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "v_Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Wolf Software | A-Team SAS";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.v_Login_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
