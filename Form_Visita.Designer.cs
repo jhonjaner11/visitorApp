@@ -50,8 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_enviar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ckb_tecnico = new System.Windows.Forms.CheckBox();
             this.pbFotoUser = new System.Windows.Forms.PictureBox();
+            this.ckb_tecnico = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).BeginInit();
             this.SuspendLayout();
@@ -337,18 +337,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1089, 387);
             this.tableLayoutPanel1.TabIndex = 42;
             // 
-            // ckb_tecnico
-            // 
-            this.ckb_tecnico.AutoSize = true;
-            this.ckb_tecnico.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ckb_tecnico.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_tecnico.Location = new System.Drawing.Point(132, 347);
-            this.ckb_tecnico.Name = "ckb_tecnico";
-            this.ckb_tecnico.Size = new System.Drawing.Size(142, 37);
-            this.ckb_tecnico.TabIndex = 41;
-            this.ckb_tecnico.Text = "¿Es técnico?";
-            this.ckb_tecnico.UseVisualStyleBackColor = true;
-            // 
             // pbFotoUser
             // 
             this.pbFotoUser.Image = global::visitorApp.Properties.Resources.visitante_icon;
@@ -360,6 +348,18 @@
             this.pbFotoUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFotoUser.TabIndex = 36;
             this.pbFotoUser.TabStop = false;
+            // 
+            // ckb_tecnico
+            // 
+            this.ckb_tecnico.AutoSize = true;
+            this.ckb_tecnico.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ckb_tecnico.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_tecnico.Location = new System.Drawing.Point(132, 347);
+            this.ckb_tecnico.Name = "ckb_tecnico";
+            this.ckb_tecnico.Size = new System.Drawing.Size(142, 37);
+            this.ckb_tecnico.TabIndex = 41;
+            this.ckb_tecnico.Text = "¿Es técnico?";
+            this.ckb_tecnico.UseVisualStyleBackColor = true;
             // 
             // Form_Visita
             // 

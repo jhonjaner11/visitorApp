@@ -139,7 +139,8 @@ namespace visitorApp
             //this.Hide();
             pbFotoUser.Image = Image.FromFile(foto_perfil);
             string id = txt_id.Text;
-            Form frm = new Form_Tomar_Foto(id);
+            string lugar = "bodega";
+            Form frm = new Form_Tomar_Foto(id, lugar);
             frm.ShowDialog();
             path_foto = "bodega/" + id + ".png";
             if (File.Exists(path_foto))

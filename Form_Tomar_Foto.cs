@@ -26,15 +26,16 @@ namespace visitorApp
 
         private VideoCaptureDevice FuenteDeVideo = null;
 
-        private string path = "bodega/";
+        private string path;
         private string foto ="";
-        public Form_Tomar_Foto(string ids)
+        public Form_Tomar_Foto(string ids, string lugar)
         {
             InitializeComponent();
             id = ids;
             BuscarDispositivos();
             inicio_cam();
-        }
+            path = lugar+"/";
+    }
 
         public void CargarDispositivos(FilterInfoCollection Dispositivos)
 

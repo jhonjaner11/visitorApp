@@ -85,7 +85,6 @@ namespace visitorApp
             MostrarTabla(tipo);
         }
 
-
         //pnl bbdd
         public void MostrarTabla(string tipo)
         {
@@ -143,9 +142,6 @@ namespace visitorApp
 
             MessageBox.Show("Exportación finalizada");
         }
-
-
-
 
         private void btn_mostrar_visitas_Click(object sender, EventArgs e)
         {
@@ -215,65 +211,5 @@ namespace visitorApp
         }
 
 
-
-
-        //private void dt_SelectionChanged(object sender, EventArgs e)
-        //{
-        //    Console.WriteLine("hola:");
-        //    Console.WriteLine("el:" +dt.SelectedRows.Count);
-        //    if (dt.SelectedRows.Count == 1)
-        //    {
-        //        //TextBox1.Value = dt.SelectedRows SelectedRows(0).Cells(0).Value;
-
-        //        //  TextBox3.Value = DataGridView1.SelectedRows(0).Cells(2).Value;
-        //        Console.WriteLine("hola");
-        //    }
-        //}
-
-
-        //private void dt_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    Console.WriteLine("el loadasdasdgin: " );
-        //}
-
-        //private void dt_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        //{
-        //    Console.WriteLine("el loadasdasdgin: ");
-        //}
-
-        //private void dt_SelectionChanged_1(object sender, EventArgs e)
-        //{
-
-        //        Console.WriteLine("click");
-        //        if (tipo == "usuario")
-        //        {
-        //           // id_eliminar = dt.Rows[e.RowIndex].Cells["id"].Value.ToString();
-        //            //string firstCellValue = dt.SelectedRows[0].Cells[0].Value;
-        //            //string id_e = dt.SelectedRows.
-
-
-        //            Console.WriteLine("cell:" + id_eliminar);
-        //        }
-        //        else if (tipo == "persona")
-        //        {
-        //            //id_eliminar = dt.Rows[e.RowIndex].Cells["id"].Value.ToString();
-        //            Console.WriteLine("cell:" + id_eliminar);
-        //        }
-        //        else if (tipo == "incidente")
-        //        {
-        //            //id_eliminar = dt.Rows[e.RowIndex].Cells["id"].Value.ToString();
-        //            Console.WriteLine("cell:" + id_eliminar);
-        //        }
-        //        else if (tipo == "visita")
-        //        {
-        //            //id_eliminar = dt.Rows[e.RowIndex].Cells["id"].Value.ToString();
-        //            Console.WriteLine("cell:" + id_eliminar);
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("jjjjj");
-        //        }
-
-        //}
     }
 }

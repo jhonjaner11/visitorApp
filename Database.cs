@@ -235,13 +235,15 @@ namespace visitorApp
         public bool InsertUsuario(string[] a)
         {
             bool res;
-            string login = a[0];
+            string cedula = a[0];
             string contraseña= a[1];
             string cargo = a[2];
-            string nombre = a[3]; 
+            string nombre = a[3];
+            string telefono = a[4];
+            string path_foto = a[5];
 
-            string query = "insert into usuario (login, contraseña, cargo, nombre ) values  ('";
-            string query2 = login+"','"+contraseña+ "','"+cargo+"','"+nombre+"')";
+            string query = "insert into usuario (cedula, contraseña, cargo, nombre, telefono, path_foto ) values  ('";
+            string query2 = cedula+"','"+contraseña+ "','"+cargo+"','"+nombre+"','"+telefono+"','"+ path_foto+"')";
             query = query + query2;
             try
             {
@@ -371,17 +373,18 @@ namespace visitorApp
                 SQLiteDataReader reader = sql.ExecuteReader();
                 if (reader.Read())
                 {
-                    res[0] = reader["login"].ToString();
+                    res[0] = reader["id"].ToString();
                     res[1] = reader["nombre"].ToString();
                     res[2] = reader["contraseña"].ToString();
                     res[3] = reader["cargo"].ToString();
                     res[4] = reader["telefono"].ToString();
                     res[5] = reader["path_foto"].ToString();
-                    res[6] = reader["id"].ToString();
+                    res[6] = reader["cedula"].ToString();
                 }
                 else
                 {
                     //usuario = "Errado";
+                    res[0] = "Errado";
                 }
 
                 //Console.WriteLine(reader["login"].ToString());
@@ -457,7 +460,7 @@ namespace visitorApp
             }
             else if (tipo == "usuario")
             {
-                query = "select * from usuario ";
+                query = "select id, nombre, cargo from usuario ";
             }
             else
             {
@@ -557,14 +560,17 @@ namespace visitorApp
             bool res;
 
             
-            string login = a[0];
+            //string login = a[0];
             string contraseña = a[1];
-            string nombre = a[2];
-            string cargo = a[3];
-            string id = a[4];
+            string nombre = a[3];
+            string cargo = a[2];
+            string id = a[0];
+            string telefono = a[4];
+            string path_foto = a[5];
+            string cedula = a[6];
 
             string query = "update usuario set ";
-            query = query+ " login='" +login+"',";
+            query = query+ " cedula='" +cedula+"',";
             query = query+ "contraseña='" +contraseña+"',";
             query = query+ "cargo='" +cargo+"',";
             query = query+"nombre='" +nombre+"' ";
