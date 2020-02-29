@@ -253,6 +253,8 @@
     <None Include="bin\Debug\iconos\visitante-icon64.png" />
     <None Include="bin\Debug\iconos\registro-incidente-icon64.png" />
     <None Include="bin\Debug\iconos\base-datos-64.png" />
+    <None Include="bin\Debug\iconos\gestion-user-icon64.png" />
+    <None Include="bin\Debug\iconos\configuracion-icon64.png" />
     <Content Include="bin\Debug\img\fondo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

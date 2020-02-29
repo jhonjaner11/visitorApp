@@ -15,7 +15,7 @@ namespace visitorApp
     {
         Database miDB = new Database();
 
-        private string foto_perfil = "img/perfil.png";
+        private string foto_perfil = "iconos/visitante-icon.png";
         private string path_foto = "";
         private string id_user;
         public Form_Visita(string usuario)

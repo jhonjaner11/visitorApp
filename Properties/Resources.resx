@@ -124,6 +124,9 @@
   <data name="wolf-software300" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\img\wolf-software300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="base-datos-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\base-datos-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="wolf-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\img\wolf-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,6 +163,9 @@
   <data name="building2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\img\building2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gestion-user-icon64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\gestion-user-icon64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo300" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\img\logo300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,7 +184,7 @@
   <data name="registro-incidente-icon64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\iconos\registro-incidente-icon64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="base-datos-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\iconos\base-datos-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="configuracion-icon64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\iconos\configuracion-icon64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

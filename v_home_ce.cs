@@ -49,6 +49,22 @@ namespace visitorApp
 
         }
 
+        private void cambiar_color_boton(Button eleccion) {
+            foreach (Button boton in panel_dock.Controls)
+            {
+                if (boton == eleccion)
+                {
+                    boton.BackColor = Color.Black;
+                    boton.Enabled = false;
+                }
+                else {
+                    boton.Enabled = true;
+                    boton.BackColor = Color.Transparent;
+                }
+            }
+
+        }
+
         private void AbrirFormHija(object formhija)
         {
             if (this.pnl_contenedor.Controls.Count > 0)
@@ -84,32 +100,15 @@ namespace visitorApp
 
         private void btn_reg_visita_Click(object sender, EventArgs e)
         {
-
-            btn_reg_visita.BackColor=Color.Black;
-            btn_reg_incidente.BackColor = Color.Transparent;
-            btn_exportar.BackColor = Color.Transparent;
-
-            btn_reg_visita.Enabled = false;
-            btn_reg_incidente.Enabled = true;
-            btn_exportar.Enabled = true;
-
-            AbrirFormHija(new Form_Visita(id_user)) ;
-
-            
+            cambiar_color_boton(btn_reg_visita);
+            AbrirFormHija(new Form_Visita(id_user));
         }
 
 
 
         private void btn_reg_incidente_Click(object sender, EventArgs e)
         {
-            btn_reg_incidente.BackColor = Color.Black;
-            btn_reg_visita.BackColor = Color.Transparent;
-            btn_exportar.BackColor = Color.Transparent;
-
-            btn_reg_visita.Enabled = true;
-            btn_reg_incidente.Enabled = false;
-            btn_exportar.Enabled = true;
-
+            cambiar_color_boton(btn_reg_incidente);
             AbrirFormHija(new Form_Incidencia(id_user));
 
         }
@@ -120,22 +119,22 @@ namespace visitorApp
 
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void btn_exportar_Click_1(object sender, EventArgs e)
         {
-            btn_reg_incidente.BackColor = Color.Transparent;
-            btn_reg_visita.BackColor = Color.Transparent;
-            btn_exportar.BackColor = Color.Black;
-
-            btn_reg_visita.Enabled = true;
-            btn_reg_incidente.Enabled = true;
-            btn_exportar.Enabled = false;
-
+            cambiar_color_boton(btn_exportar);
             AbrirFormHija(new Form_bbdd());
 
 
         }
 
+        private void btn_Users_Click(object sender, EventArgs e)
+        {
+            cambiar_color_boton(btn_Users);
+        }
 
-
+        private void btn_configuracion_Click(object sender, EventArgs e)
+        {
+            cambiar_color_boton(btn_configuracion);
+        }
     }
 }
