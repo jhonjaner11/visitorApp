@@ -99,6 +99,18 @@
     <Compile Include="Form_bbdd.Designer.cs">
       <DependentUpon>Form_bbdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Control_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Control_Usuarios.Designer.cs">
+      <DependentUpon>Form_Control_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Control_Usuarios2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Control_Usuarios2.Designer.cs">
+      <DependentUpon>Form_Control_Usuarios2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Incidencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </Compile>
     <EmbeddedResource Include="Form_bbdd.resx">
       <DependentUpon>Form_bbdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Control_Usuarios.resx">
+      <DependentUpon>Form_Control_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Control_Usuarios2.resx">
+      <DependentUpon>Form_Control_Usuarios2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Incidencia.resx">
       <DependentUpon>Form_Incidencia.cs</DependentUpon>
@@ -255,6 +273,7 @@
     <None Include="bin\Debug\iconos\base-datos-64.png" />
     <None Include="bin\Debug\iconos\gestion-user-icon64.png" />
     <None Include="bin\Debug\iconos\configuracion-icon64.png" />
+    <None Include="bin\Debug\img\barra.png" />
     <Content Include="bin\Debug\img\fondo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

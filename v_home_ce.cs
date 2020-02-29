@@ -130,6 +130,7 @@ namespace visitorApp
         private void btn_Users_Click(object sender, EventArgs e)
         {
             cambiar_color_boton(btn_Users);
+            AbrirFormHija(new Form_Control_Usuarios());
         }
 
         private void btn_configuracion_Click(object sender, EventArgs e)

@@ -59,7 +59,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1089, 88);
@@ -70,10 +70,10 @@
             // txt_placa
             // 
             this.txt_placa.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txt_placa.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_placa.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_placa.Location = new System.Drawing.Point(657, 304);
             this.txt_placa.Name = "txt_placa";
-            this.txt_placa.Size = new System.Drawing.Size(148, 37);
+            this.txt_placa.Size = new System.Drawing.Size(148, 35);
             this.txt_placa.TabIndex = 27;
             // 
             // btn_cam
@@ -82,7 +82,7 @@
             this.btn_cam.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_cam.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_cam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cam.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_cam.Location = new System.Drawing.Point(657, 218);
             this.btn_cam.Name = "btn_cam";
@@ -96,10 +96,10 @@
             // 
             this.lbl_placa.AutoSize = true;
             this.lbl_placa.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_placa.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_placa.Location = new System.Drawing.Point(599, 301);
+            this.lbl_placa.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_placa.Location = new System.Drawing.Point(591, 301);
             this.lbl_placa.Name = "lbl_placa";
-            this.lbl_placa.Size = new System.Drawing.Size(52, 43);
+            this.lbl_placa.Size = new System.Drawing.Size(60, 43);
             this.lbl_placa.TabIndex = 26;
             this.lbl_placa.Text = "Placa:";
             this.lbl_placa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -107,33 +107,33 @@
             // txt_telefono
             // 
             this.txt_telefono.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_telefono.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono.Location = new System.Drawing.Point(280, 218);
             this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(130, 37);
+            this.txt_telefono.Size = new System.Drawing.Size(130, 35);
             this.txt_telefono.TabIndex = 32;
             // 
             // comboBox_tp_Vh
             // 
             this.comboBox_tp_Vh.Dock = System.Windows.Forms.DockStyle.Left;
-            this.comboBox_tp_Vh.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_tp_Vh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_tp_Vh.FormattingEnabled = true;
             this.comboBox_tp_Vh.Items.AddRange(new object[] {
             "Carro",
             "Moto"});
             this.comboBox_tp_Vh.Location = new System.Drawing.Point(416, 304);
             this.comboBox_tp_Vh.Name = "comboBox_tp_Vh";
-            this.comboBox_tp_Vh.Size = new System.Drawing.Size(166, 41);
+            this.comboBox_tp_Vh.Size = new System.Drawing.Size(166, 37);
             this.comboBox_tp_Vh.TabIndex = 22;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label12.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(153, 215);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(158, 215);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 43);
+            this.label12.Size = new System.Drawing.Size(116, 43);
             this.label12.TabIndex = 40;
             this.label12.Text = "Telefono:";
             // 
@@ -141,10 +141,10 @@
             // 
             this.lbl_tipo.AutoSize = true;
             this.lbl_tipo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_tipo.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tipo.Location = new System.Drawing.Point(339, 301);
+            this.lbl_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tipo.Location = new System.Drawing.Point(341, 301);
             this.lbl_tipo.Name = "lbl_tipo";
-            this.lbl_tipo.Size = new System.Drawing.Size(71, 43);
+            this.lbl_tipo.Size = new System.Drawing.Size(69, 43);
             this.lbl_tipo.TabIndex = 21;
             this.lbl_tipo.Text = "Tipo:";
             this.lbl_tipo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -153,40 +153,40 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txt_nombre, 2);
             this.txt_nombre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_nombre.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.Location = new System.Drawing.Point(280, 175);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(303, 37);
+            this.txt_nombre.Size = new System.Drawing.Size(303, 35);
             this.txt_nombre.TabIndex = 31;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(154, 172);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(167, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 43);
+            this.label5.Size = new System.Drawing.Size(107, 43);
             this.label5.TabIndex = 39;
             this.label5.Text = "Nombre:";
             // 
             // txt_apto
             // 
             this.txt_apto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_apto.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apto.Location = new System.Drawing.Point(280, 261);
             this.txt_apto.Name = "txt_apto";
-            this.txt_apto.Size = new System.Drawing.Size(130, 37);
+            this.txt_apto.Size = new System.Drawing.Size(130, 35);
             this.txt_apto.TabIndex = 34;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(196, 258);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(206, 258);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 43);
+            this.label8.Size = new System.Drawing.Size(68, 43);
             this.label8.TabIndex = 33;
             this.label8.Text = "Apto:";
             // 
@@ -194,16 +194,16 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txt_fecha_v, 2);
             this.txt_fecha_v.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_fecha_v.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fecha_v.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_fecha_v.Location = new System.Drawing.Point(280, 46);
             this.txt_fecha_v.Name = "txt_fecha_v";
-            this.txt_fecha_v.Size = new System.Drawing.Size(303, 37);
+            this.txt_fecha_v.Size = new System.Drawing.Size(303, 35);
             this.txt_fecha_v.TabIndex = 38;
             // 
             // comboBox_id
             // 
             this.comboBox_id.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox_id.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_id.FormattingEnabled = true;
             this.comboBox_id.Items.AddRange(new object[] {
             "CC",
@@ -212,7 +212,7 @@
             "Cedula Extranjera"});
             this.comboBox_id.Location = new System.Drawing.Point(280, 89);
             this.comboBox_id.Name = "comboBox_id";
-            this.comboBox_id.Size = new System.Drawing.Size(130, 41);
+            this.comboBox_id.Size = new System.Drawing.Size(130, 37);
             this.comboBox_id.TabIndex = 30;
             // 
             // txt_id
@@ -221,10 +221,10 @@
             this.txt_id.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tableLayoutPanel1.SetColumnSpan(this.txt_id, 2);
             this.txt_id.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_id.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id.Location = new System.Drawing.Point(280, 132);
             this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(303, 37);
+            this.txt_id.Size = new System.Drawing.Size(303, 35);
             this.txt_id.TabIndex = 29;
             this.txt_id.TextChanged += new System.EventHandler(this.txt_id_TextChanged);
             // 
@@ -232,10 +232,10 @@
             // 
             this.checkBox_vehiculo.AutoSize = true;
             this.checkBox_vehiculo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox_vehiculo.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_vehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_vehiculo.Location = new System.Drawing.Point(132, 304);
             this.checkBox_vehiculo.Name = "checkBox_vehiculo";
-            this.checkBox_vehiculo.Size = new System.Drawing.Size(137, 37);
+            this.checkBox_vehiculo.Size = new System.Drawing.Size(125, 37);
             this.checkBox_vehiculo.TabIndex = 28;
             this.checkBox_vehiculo.Text = "Vehiculo";
             this.checkBox_vehiculo.UseVisualStyleBackColor = true;
@@ -245,10 +245,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(181, 43);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(188, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 43);
+            this.label4.Size = new System.Drawing.Size(86, 43);
             this.label4.TabIndex = 25;
             this.label4.Text = "Fecha:";
             // 
@@ -256,10 +256,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(145, 129);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(133, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 43);
+            this.label3.Size = new System.Drawing.Size(141, 43);
             this.label3.TabIndex = 24;
             this.label3.Text = "Identificacion:";
             // 
@@ -267,10 +267,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(170, 86);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(176, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 43);
+            this.label2.Size = new System.Drawing.Size(98, 43);
             this.label2.TabIndex = 23;
             this.label2.Text = "Tipo ID:";
             // 
@@ -281,7 +281,7 @@
             this.btn_enviar.FlatAppearance.BorderSize = 0;
             this.btn_enviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btn_enviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_enviar.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_enviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_enviar.Location = new System.Drawing.Point(0, 475);
             this.btn_enviar.Name = "btn_enviar";
             this.btn_enviar.Size = new System.Drawing.Size(1089, 57);
@@ -341,7 +341,7 @@
             // 
             this.ckb_tecnico.AutoSize = true;
             this.ckb_tecnico.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ckb_tecnico.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_tecnico.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckb_tecnico.Location = new System.Drawing.Point(132, 347);
             this.ckb_tecnico.Name = "ckb_tecnico";
             this.ckb_tecnico.Size = new System.Drawing.Size(142, 37);

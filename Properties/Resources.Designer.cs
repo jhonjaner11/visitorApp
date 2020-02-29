@@ -73,6 +73,16 @@ namespace visitorApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barra {
+            get {
+                object obj = ResourceManager.GetObject("barra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap base_datos_128 {
             get {
                 object obj = ResourceManager.GetObject("base-datos-128", resourceCulture);
