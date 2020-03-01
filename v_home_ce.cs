@@ -136,6 +136,7 @@ namespace visitorApp
         private void btn_configuracion_Click(object sender, EventArgs e)
         {
             cambiar_color_boton(btn_configuracion);
+            AbrirFormHija(new Form_Configuraciones());
         }
     }
 }

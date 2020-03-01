@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace visitorApp
 {
-    public partial class Form_Control_Usuarios2 : Form
+    public partial class Form_Configuraciones : Form
     {
-        public Form_Control_Usuarios2()
+        public Form_Configuraciones()
         {
             InitializeComponent();
         }
