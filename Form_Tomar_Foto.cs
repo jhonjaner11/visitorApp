@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AForge.Video;
 
+using AForge.Video;
 using AForge.Video.DirectShow;
 
 using System.IO;
@@ -35,7 +35,7 @@ namespace visitorApp
             BuscarDispositivos();
             inicio_cam();
             path = lugar+"/";
-    }
+        }
 
         public void CargarDispositivos(FilterInfoCollection Dispositivos)
 
@@ -46,26 +46,24 @@ namespace visitorApp
             //cboDispositivos es nuestro combobox
 
             cboDispositivos.Text = cboDispositivos.Items[0].ToString();
+            Console.WriteLine(Properties.Settings.Default.camara);
+           
+
+            cboDispositivos.SelectedIndex = cboDispositivos.FindStringExact(Properties.Settings.Default.camara);
 
         }
         public void BuscarDispositivos()
 
         {
-
             DispositivosDeVideo =
             new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
             if (DispositivosDeVideo.Count == 0)
-
                 ExistenDispositivos = false;
             else
-
             {
-
                 ExistenDispositivos = true;
-
                 CargarDispositivos(DispositivosDeVideo);
-
             }
 
         }
@@ -105,6 +103,7 @@ namespace visitorApp
                 if (ExistenDispositivos)
                 {
                     FuenteDeVideo = new VideoCaptureDevice(DispositivosDeVideo[cboDispositivos.SelectedIndex].MonikerString);
+                    //FuenteDeVideo = new VideoCaptureDevice(Properties.Settings.Default.camara.MonikerString);
                     FuenteDeVideo.NewFrame += new NewFrameEventHandler(video_NuevoFrame);
                     FuenteDeVideo.Start();
                     btnIniciar.Text = "Detener";

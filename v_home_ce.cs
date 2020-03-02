@@ -129,7 +129,7 @@ namespace visitorApp
 
         private void btn_Users_Click(object sender, EventArgs e)
         {
-            cambiar_color_boton(btn_Users);
+            cambiar_color_boton(btn_users);
             AbrirFormHija(new Form_Control_Usuarios());
         }
 
@@ -137,6 +137,12 @@ namespace visitorApp
         {
             cambiar_color_boton(btn_configuracion);
             AbrirFormHija(new Form_Configuraciones());
+        }
+
+        private void btn_entrega_Click(object sender, EventArgs e)
+        {
+            cambiar_color_boton(btn_entrega);
+            AbrirFormHija(new Form_Entregas());
         }
     }
 }

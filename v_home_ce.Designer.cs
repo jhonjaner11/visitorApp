@@ -31,13 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v_home_ce));
             this.pnl_v_home_ce = new System.Windows.Forms.Panel();
             this.pnl_contenedor = new System.Windows.Forms.Panel();
+            this.panel_dock = new System.Windows.Forms.Panel();
+            this.btn_entrega = new System.Windows.Forms.Button();
+            this.btn_users = new System.Windows.Forms.Button();
             this.btn_configuracion = new System.Windows.Forms.Button();
-            this.btn_Users = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_exportar = new System.Windows.Forms.Button();
             this.btn_reg_incidente = new System.Windows.Forms.Button();
             this.btn_reg_visita = new System.Windows.Forms.Button();
-            this.panel_dock = new System.Windows.Forms.Panel();
             this.pnl_v_home_ce.SuspendLayout();
             this.panel_dock.SuspendLayout();
             this.SuspendLayout();
@@ -65,36 +66,68 @@
             this.pnl_contenedor.Size = new System.Drawing.Size(1243, 748);
             this.pnl_contenedor.TabIndex = 3;
             // 
+            // panel_dock
+            // 
+            this.panel_dock.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel_dock.Controls.Add(this.btn_entrega);
+            this.panel_dock.Controls.Add(this.btn_users);
+            this.panel_dock.Controls.Add(this.btn_configuracion);
+            this.panel_dock.Controls.Add(this.btn_salir);
+            this.panel_dock.Controls.Add(this.btn_exportar);
+            this.panel_dock.Controls.Add(this.btn_reg_incidente);
+            this.panel_dock.Controls.Add(this.btn_reg_visita);
+            this.panel_dock.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_dock.Location = new System.Drawing.Point(0, 0);
+            this.panel_dock.Name = "panel_dock";
+            this.panel_dock.Size = new System.Drawing.Size(75, 748);
+            this.panel_dock.TabIndex = 4;
+            // 
+            // btn_entrega
+            // 
+            this.btn_entrega.AccessibleDescription = "Configuración";
+            this.btn_entrega.BackgroundImage = global::visitorApp.Properties.Resources.caja_icon64;
+            this.btn_entrega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_entrega.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_entrega.FlatAppearance.BorderSize = 0;
+            this.btn_entrega.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_entrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_entrega.Location = new System.Drawing.Point(0, 225);
+            this.btn_entrega.Name = "btn_entrega";
+            this.btn_entrega.Size = new System.Drawing.Size(75, 75);
+            this.btn_entrega.TabIndex = 6;
+            this.btn_entrega.UseVisualStyleBackColor = true;
+            this.btn_entrega.Click += new System.EventHandler(this.btn_entrega_Click);
+            // 
+            // btn_users
+            // 
+            this.btn_users.AccessibleDescription = "Configuración";
+            this.btn_users.BackgroundImage = global::visitorApp.Properties.Resources.gestion_user_icon64;
+            this.btn_users.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_users.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_users.FlatAppearance.BorderSize = 0;
+            this.btn_users.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_users.Location = new System.Drawing.Point(0, 527);
+            this.btn_users.Name = "btn_users";
+            this.btn_users.Size = new System.Drawing.Size(75, 75);
+            this.btn_users.TabIndex = 5;
+            this.btn_users.UseVisualStyleBackColor = true;
+            this.btn_users.Click += new System.EventHandler(this.btn_Users_Click);
+            // 
             // btn_configuracion
             // 
-            this.btn_configuracion.AccessibleDescription = "Configuración";
             this.btn_configuracion.BackgroundImage = global::visitorApp.Properties.Resources.configuracion_icon64;
             this.btn_configuracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_configuracion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_configuracion.FlatAppearance.BorderSize = 0;
             this.btn_configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btn_configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_configuracion.Location = new System.Drawing.Point(0, 523);
+            this.btn_configuracion.Location = new System.Drawing.Point(0, 602);
             this.btn_configuracion.Name = "btn_configuracion";
-            this.btn_configuracion.Size = new System.Drawing.Size(75, 75);
-            this.btn_configuracion.TabIndex = 5;
+            this.btn_configuracion.Size = new System.Drawing.Size(75, 71);
+            this.btn_configuracion.TabIndex = 4;
             this.btn_configuracion.UseVisualStyleBackColor = true;
             this.btn_configuracion.Click += new System.EventHandler(this.btn_configuracion_Click);
-            // 
-            // btn_Users
-            // 
-            this.btn_Users.BackgroundImage = global::visitorApp.Properties.Resources.gestion_user_icon64;
-            this.btn_Users.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_Users.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_Users.FlatAppearance.BorderSize = 0;
-            this.btn_Users.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_Users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Users.Location = new System.Drawing.Point(0, 598);
-            this.btn_Users.Name = "btn_Users";
-            this.btn_Users.Size = new System.Drawing.Size(75, 75);
-            this.btn_Users.TabIndex = 4;
-            this.btn_Users.UseVisualStyleBackColor = true;
-            this.btn_Users.Click += new System.EventHandler(this.btn_Users_Click);
             // 
             // btn_salir
             // 
@@ -159,21 +192,6 @@
             this.btn_reg_visita.UseVisualStyleBackColor = true;
             this.btn_reg_visita.Click += new System.EventHandler(this.btn_reg_visita_Click);
             // 
-            // panel_dock
-            // 
-            this.panel_dock.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel_dock.Controls.Add(this.btn_configuracion);
-            this.panel_dock.Controls.Add(this.btn_Users);
-            this.panel_dock.Controls.Add(this.btn_salir);
-            this.panel_dock.Controls.Add(this.btn_exportar);
-            this.panel_dock.Controls.Add(this.btn_reg_incidente);
-            this.panel_dock.Controls.Add(this.btn_reg_visita);
-            this.panel_dock.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_dock.Location = new System.Drawing.Point(0, 0);
-            this.panel_dock.Name = "panel_dock";
-            this.panel_dock.Size = new System.Drawing.Size(75, 748);
-            this.panel_dock.TabIndex = 4;
-            // 
             // v_home_ce
             // 
             this.AllowDrop = true;
@@ -186,7 +204,7 @@
             this.Controls.Add(this.pnl_v_home_ce);
             this.Controls.Add(this.panel_dock);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "v_home_ce";
@@ -208,8 +226,9 @@
         private System.Windows.Forms.Panel pnl_v_home_ce;
         private System.Windows.Forms.Button btn_exportar;
         private System.Windows.Forms.Panel pnl_contenedor;
-        private System.Windows.Forms.Button btn_Users;
         private System.Windows.Forms.Button btn_configuracion;
+        private System.Windows.Forms.Button btn_users;
         private System.Windows.Forms.Panel panel_dock;
+        private System.Windows.Forms.Button btn_entrega;
     }
 }

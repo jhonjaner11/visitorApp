@@ -22,5 +22,17 @@ namespace visitorApp.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string camara {
+            get {
+                return ((string)(this["camara"]));
+            }
+            set {
+                this["camara"] = value;
+            }
+        }
     }
 }

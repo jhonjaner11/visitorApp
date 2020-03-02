@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_bbdd));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_f_final = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.time_inicio = new System.Windows.Forms.DateTimePicker();
             this.btn_nuevo = new System.Windows.Forms.Button();
-            this.btn_usuarios = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dt = new System.Windows.Forms.DataGridView();
             this.chk_Box_filtro = new System.Windows.Forms.CheckBox();
@@ -62,6 +62,7 @@
             // 
             // btn_modificar
             // 
+            this.btn_modificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_modificar.BackgroundImage")));
             this.btn_modificar.Location = new System.Drawing.Point(804, 301);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(90, 63);
@@ -92,6 +93,7 @@
             // 
             // btn_eliminar
             // 
+            this.btn_eliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.BackgroundImage")));
             this.btn_eliminar.Location = new System.Drawing.Point(804, 370);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(90, 63);
@@ -113,7 +115,8 @@
             // 
             // btn_nuevo
             // 
-            this.btn_nuevo.Location = new System.Drawing.Point(789, 232);
+            this.btn_nuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nuevo.BackgroundImage")));
+            this.btn_nuevo.Location = new System.Drawing.Point(804, 232);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(90, 63);
             this.btn_nuevo.TabIndex = 31;
@@ -121,18 +124,9 @@
             this.btn_nuevo.UseVisualStyleBackColor = true;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
-            // btn_usuarios
-            // 
-            this.btn_usuarios.Location = new System.Drawing.Point(285, 170);
-            this.btn_usuarios.Name = "btn_usuarios";
-            this.btn_usuarios.Size = new System.Drawing.Size(85, 48);
-            this.btn_usuarios.TabIndex = 30;
-            this.btn_usuarios.Text = "Usuarios";
-            this.btn_usuarios.UseVisualStyleBackColor = true;
-            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click_1);
-            // 
             // button3
             // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Location = new System.Drawing.Point(194, 170);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(85, 48);
@@ -194,6 +188,7 @@
             // 
             // btn_mostrar_incidentes
             // 
+            this.btn_mostrar_incidentes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mostrar_incidentes.BackgroundImage")));
             this.btn_mostrar_incidentes.Location = new System.Drawing.Point(103, 170);
             this.btn_mostrar_incidentes.Name = "btn_mostrar_incidentes";
             this.btn_mostrar_incidentes.Size = new System.Drawing.Size(85, 48);
@@ -204,6 +199,7 @@
             // 
             // btn_mostrar_visitas
             // 
+            this.btn_mostrar_visitas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mostrar_visitas.BackgroundImage")));
             this.btn_mostrar_visitas.Location = new System.Drawing.Point(21, 171);
             this.btn_mostrar_visitas.Name = "btn_mostrar_visitas";
             this.btn_mostrar_visitas.Size = new System.Drawing.Size(75, 48);
@@ -228,7 +224,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(36, 32);
+            this.label13.Location = new System.Drawing.Point(19, 32);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(474, 73);
             this.label13.TabIndex = 19;
@@ -236,6 +232,7 @@
             // 
             // btn_export
             // 
+            this.btn_export.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_export.BackgroundImage")));
             this.btn_export.Location = new System.Drawing.Point(396, 434);
             this.btn_export.Name = "btn_export";
             this.btn_export.Size = new System.Drawing.Size(75, 23);
@@ -251,7 +248,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(950, 62);
+            this.button1.Location = new System.Drawing.Point(976, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(43, 43);
             this.button1.TabIndex = 4;
@@ -273,7 +270,6 @@
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.time_inicio);
             this.Controls.Add(this.btn_nuevo);
-            this.Controls.Add(this.btn_usuarios);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dt);
             this.Controls.Add(this.chk_Box_filtro);
@@ -301,7 +297,6 @@
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.DateTimePicker time_inicio;
         private System.Windows.Forms.Button btn_nuevo;
-        private System.Windows.Forms.Button btn_usuarios;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dt;
         private System.Windows.Forms.CheckBox chk_Box_filtro;
