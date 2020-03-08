@@ -21,7 +21,11 @@ namespace visitorApp
         public Form_Visita(string usuario)
         {
             InitializeComponent();
+            
             autoLlenarId(txt_id);
+            
+            
+
             txt_fecha_v.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             comboBox_id.SelectedIndex = 0;
             id_user = usuario;
@@ -45,6 +49,7 @@ namespace visitorApp
 
         public void autoLlenarPersona(string id, TextBox cjNombre, ComboBox cjTipoId, TextBox cjTelefono, PictureBox PathFoto)
         {
+           
           
             string[] res = miDB.GetOnlyPersona(id);
             Console.WriteLine(res);
@@ -170,7 +175,6 @@ namespace visitorApp
         private void txt_id_TextChanged(object sender, EventArgs e)
         {
 
-
             autoLlenarPersona(txt_id.Text, txt_nombre, comboBox_id, txt_telefono, pbFotoUser);
             if (txt_id.Text != "")
             {
@@ -236,9 +240,6 @@ namespace visitorApp
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+   
     }
 }

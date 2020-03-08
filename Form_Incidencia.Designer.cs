@@ -41,16 +41,16 @@
             // txt_aptos_i
             // 
             this.txt_aptos_i.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_aptos_i.Location = new System.Drawing.Point(71, 140);
+            this.txt_aptos_i.Location = new System.Drawing.Point(71, 183);
             this.txt_aptos_i.Name = "txt_aptos_i";
-            this.txt_aptos_i.Size = new System.Drawing.Size(346, 35);
+            this.txt_aptos_i.Size = new System.Drawing.Size(300, 35);
             this.txt_aptos_i.TabIndex = 27;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(66, 110);
+            this.label17.Location = new System.Drawing.Point(70, 143);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(305, 25);
             this.label17.TabIndex = 26;
@@ -58,36 +58,40 @@
             // 
             // btn_enviar_incidente
             // 
-            this.btn_enviar_incidente.Location = new System.Drawing.Point(423, 389);
+            this.btn_enviar_incidente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_enviar_incidente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_enviar_incidente.Location = new System.Drawing.Point(217, 430);
             this.btn_enviar_incidente.Name = "btn_enviar_incidente";
-            this.btn_enviar_incidente.Size = new System.Drawing.Size(193, 52);
+            this.btn_enviar_incidente.Size = new System.Drawing.Size(105, 39);
             this.btn_enviar_incidente.TabIndex = 25;
-            this.btn_enviar_incidente.Text = "enviar";
+            this.btn_enviar_incidente.Text = "Enviar";
             this.btn_enviar_incidente.UseVisualStyleBackColor = true;
             this.btn_enviar_incidente.Click += new System.EventHandler(this.btn_enviar_incidente_Click_1);
             // 
             // rtxt_desc
             // 
             this.rtxt_desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxt_desc.Location = new System.Drawing.Point(93, 288);
+            this.rtxt_desc.Location = new System.Drawing.Point(75, 288);
             this.rtxt_desc.Name = "rtxt_desc";
-            this.rtxt_desc.Size = new System.Drawing.Size(819, 95);
+            this.rtxt_desc.Size = new System.Drawing.Size(446, 95);
             this.rtxt_desc.TabIndex = 24;
             this.rtxt_desc.Text = "";
             // 
             // txt_fecha_i
             // 
+            this.txt_fecha_i.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txt_fecha_i.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_fecha_i.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha_i.Location = new System.Drawing.Point(591, 140);
+            this.txt_fecha_i.Location = new System.Drawing.Point(75, 109);
             this.txt_fecha_i.Name = "txt_fecha_i";
-            this.txt_fecha_i.Size = new System.Drawing.Size(283, 35);
+            this.txt_fecha_i.Size = new System.Drawing.Size(283, 28);
             this.txt_fecha_i.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(586, 110);
+            this.label10.Location = new System.Drawing.Point(70, 79);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 25);
             this.label10.TabIndex = 22;
@@ -107,7 +111,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(65, 49);
+            this.label9.Location = new System.Drawing.Point(65, 24);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(446, 55);
             this.label9.TabIndex = 20;
@@ -117,8 +121,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(976, 490);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(601, 490);
             this.Controls.Add(this.txt_aptos_i);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.btn_enviar_incidente);

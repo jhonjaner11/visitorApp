@@ -1,6 +1,6 @@
 ﻿namespace visitorApp
 {
-    partial class Form_bbdd
+    partial class Form_BBDD
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_bbdd));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_BBDD));
             this.lbl_f_final = new System.Windows.Forms.Label();
-            this.btn_modificar = new System.Windows.Forms.Button();
             this.lbl_f_inicio = new System.Windows.Forms.Label();
             this.time_final = new System.Windows.Forms.DateTimePicker();
-            this.btn_eliminar = new System.Windows.Forms.Button();
             this.time_inicio = new System.Windows.Forms.DateTimePicker();
-            this.btn_nuevo = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dt = new System.Windows.Forms.DataGridView();
             this.chk_Box_filtro = new System.Windows.Forms.CheckBox();
-            this.btn_mostrar_incidentes = new System.Windows.Forms.Button();
-            this.btn_mostrar_visitas = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btn_export = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_export = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_nuevo = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btn_mostrar_incidentes = new System.Windows.Forms.Button();
+            this.btn_mostrar_visitas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,17 +59,6 @@
             this.lbl_f_final.Size = new System.Drawing.Size(143, 25);
             this.lbl_f_final.TabIndex = 26;
             this.lbl_f_final.Text = "Fecha Final:";
-            // 
-            // btn_modificar
-            // 
-            this.btn_modificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_modificar.BackgroundImage")));
-            this.btn_modificar.Location = new System.Drawing.Point(804, 301);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(90, 63);
-            this.btn_modificar.TabIndex = 33;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // lbl_f_inicio
             // 
@@ -91,17 +80,6 @@
             this.time_final.Size = new System.Drawing.Size(153, 31);
             this.time_final.TabIndex = 24;
             // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.BackgroundImage")));
-            this.btn_eliminar.Location = new System.Drawing.Point(804, 370);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(90, 63);
-            this.btn_eliminar.TabIndex = 32;
-            this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = true;
-            this.btn_eliminar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // time_inicio
             // 
             this.time_inicio.CustomFormat = "";
@@ -112,28 +90,6 @@
             this.time_inicio.Size = new System.Drawing.Size(148, 31);
             this.time_inicio.TabIndex = 23;
             this.time_inicio.Value = new System.DateTime(2020, 2, 19, 23, 49, 47, 0);
-            // 
-            // btn_nuevo
-            // 
-            this.btn_nuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nuevo.BackgroundImage")));
-            this.btn_nuevo.Location = new System.Drawing.Point(804, 232);
-            this.btn_nuevo.Name = "btn_nuevo";
-            this.btn_nuevo.Size = new System.Drawing.Size(90, 63);
-            this.btn_nuevo.TabIndex = 31;
-            this.btn_nuevo.Text = "Nuevo";
-            this.btn_nuevo.UseVisualStyleBackColor = true;
-            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.Location = new System.Drawing.Point(194, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 48);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Personas";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dt
             // 
@@ -170,7 +126,7 @@
             this.dt.RowHeadersVisible = false;
             this.dt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dt.ShowEditingIcon = false;
-            this.dt.Size = new System.Drawing.Size(668, 179);
+            this.dt.Size = new System.Drawing.Size(777, 179);
             this.dt.TabIndex = 28;
             this.dt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_CellClick);
             // 
@@ -186,60 +142,27 @@
             this.chk_Box_filtro.UseVisualStyleBackColor = true;
             this.chk_Box_filtro.CheckedChanged += new System.EventHandler(this.chk_Box_filtro_CheckedChanged_1);
             // 
-            // btn_mostrar_incidentes
-            // 
-            this.btn_mostrar_incidentes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mostrar_incidentes.BackgroundImage")));
-            this.btn_mostrar_incidentes.Location = new System.Drawing.Point(103, 170);
-            this.btn_mostrar_incidentes.Name = "btn_mostrar_incidentes";
-            this.btn_mostrar_incidentes.Size = new System.Drawing.Size(85, 48);
-            this.btn_mostrar_incidentes.TabIndex = 22;
-            this.btn_mostrar_incidentes.Text = "Incidentes";
-            this.btn_mostrar_incidentes.UseVisualStyleBackColor = true;
-            this.btn_mostrar_incidentes.Click += new System.EventHandler(this.btn_mostrar_incidentes_Click);
-            // 
-            // btn_mostrar_visitas
-            // 
-            this.btn_mostrar_visitas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mostrar_visitas.BackgroundImage")));
-            this.btn_mostrar_visitas.Location = new System.Drawing.Point(21, 171);
-            this.btn_mostrar_visitas.Name = "btn_mostrar_visitas";
-            this.btn_mostrar_visitas.Size = new System.Drawing.Size(75, 48);
-            this.btn_mostrar_visitas.TabIndex = 21;
-            this.btn_mostrar_visitas.Text = "Visitas";
-            this.btn_mostrar_visitas.UseVisualStyleBackColor = true;
-            this.btn_mostrar_visitas.Click += new System.EventHandler(this.btn_mostrar_visitas_Click);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(28, 105);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(420, 40);
+            this.label14.Size = new System.Drawing.Size(440, 40);
             this.label14.TabIndex = 20;
-            this.label14.Text = "Este modulo permite descargar en formato Excel \r\nlas visitas e incidentes que est" +
-    "en registrados en el sistema";
+            this.label14.Text = "Este modulo permite modificar y descargar  en formato Excel \r\nlas visitas e incid" +
+    "entes que esten registrados en el sistema.";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(19, 32);
+            this.label13.Location = new System.Drawing.Point(12, 32);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(474, 73);
             this.label13.TabIndex = 19;
             this.label13.Text = "Exportar Datos";
-            // 
-            // btn_export
-            // 
-            this.btn_export.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_export.BackgroundImage")));
-            this.btn_export.Location = new System.Drawing.Point(396, 434);
-            this.btn_export.Name = "btn_export";
-            this.btn_export.Size = new System.Drawing.Size(75, 23);
-            this.btn_export.TabIndex = 34;
-            this.btn_export.Text = "Exportar";
-            this.btn_export.UseVisualStyleBackColor = true;
-            this.btn_export.Click += new System.EventHandler(this.btn_export_Click_1);
             // 
             // button1
             // 
@@ -255,11 +178,94 @@
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form_bbdd
+            // btn_export
+            // 
+            this.btn_export.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_export.BackgroundImage")));
+            this.btn_export.Location = new System.Drawing.Point(323, 430);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(125, 43);
+            this.btn_export.TabIndex = 34;
+            this.btn_export.Text = "Exportar  a Excel";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click_1);
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_modificar.BackgroundImage")));
+            this.btn_modificar.Location = new System.Drawing.Point(821, 301);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(90, 43);
+            this.btn_modificar.TabIndex = 33;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.BackgroundImage")));
+            this.btn_eliminar.Location = new System.Drawing.Point(821, 370);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(90, 43);
+            this.btn_eliminar.TabIndex = 32;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_nuevo
+            // 
+            this.btn_nuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nuevo.BackgroundImage")));
+            this.btn_nuevo.Location = new System.Drawing.Point(821, 232);
+            this.btn_nuevo.Name = "btn_nuevo";
+            this.btn_nuevo.Size = new System.Drawing.Size(90, 43);
+            this.btn_nuevo.TabIndex = 31;
+            this.btn_nuevo.Text = "Nuevo";
+            this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.Image = global::visitorApp.Properties.Resources.grupo_32;
+            this.button3.Location = new System.Drawing.Point(301, 154);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(132, 58);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Registro de Visitantes";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btn_mostrar_incidentes
+            // 
+            this.btn_mostrar_incidentes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mostrar_incidentes.BackgroundImage")));
+            this.btn_mostrar_incidentes.Location = new System.Drawing.Point(196, 154);
+            this.btn_mostrar_incidentes.Name = "btn_mostrar_incidentes";
+            this.btn_mostrar_incidentes.Size = new System.Drawing.Size(85, 48);
+            this.btn_mostrar_incidentes.TabIndex = 22;
+            this.btn_mostrar_incidentes.Text = "Registro de Incidentes";
+            this.btn_mostrar_incidentes.UseVisualStyleBackColor = true;
+            this.btn_mostrar_incidentes.Click += new System.EventHandler(this.btn_mostrar_incidentes_Click);
+            // 
+            // btn_mostrar_visitas
+            // 
+            this.btn_mostrar_visitas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mostrar_visitas.BackgroundImage")));
+            this.btn_mostrar_visitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_mostrar_visitas.Image = global::visitorApp.Properties.Resources.internet_32;
+            this.btn_mostrar_visitas.Location = new System.Drawing.Point(32, 154);
+            this.btn_mostrar_visitas.Name = "btn_mostrar_visitas";
+            this.btn_mostrar_visitas.Size = new System.Drawing.Size(140, 48);
+            this.btn_mostrar_visitas.TabIndex = 21;
+            this.btn_mostrar_visitas.Text = "Registro de Visitas";
+            this.btn_mostrar_visitas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_mostrar_visitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_mostrar_visitas.UseVisualStyleBackColor = true;
+            this.btn_mostrar_visitas.Click += new System.EventHandler(this.btn_mostrar_visitas_Click);
+            // 
+            // Form_BBDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1031, 662);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_export);
@@ -280,7 +286,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_bbdd";
+            this.Name = "Form_BBDD";
             this.Text = "Form_bbdd";
             ((System.ComponentModel.ISupportInitialize)(this.dt)).EndInit();
             this.ResumeLayout(false);

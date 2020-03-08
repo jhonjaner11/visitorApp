@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace visitorApp
 {
-    public partial class Form_Entregas : Form
+    public partial class Form_Entrega : Form
     {
-        public Form_Entregas()
+        public Form_Entrega()
         {
             InitializeComponent();
         }

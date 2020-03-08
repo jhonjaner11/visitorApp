@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace visitorApp
 {
-    public partial class Form_bbdd : Form
+    public partial class Form_BBDD : Form
     {
         Database miDB = new Database();
         public string id_eliminar = "";
         private string tipo = "";
 
         //private string id_user;
-        public Form_bbdd()
+        public Form_BBDD()
         {
             InitializeComponent();
             lbl_f_final.Visible = false;

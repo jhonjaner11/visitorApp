@@ -93,11 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
-    <Compile Include="Form_bbdd.cs">
+    <Compile Include="Form_BBDD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_bbdd.Designer.cs">
-      <DependentUpon>Form_bbdd.cs</DependentUpon>
+    <Compile Include="Form_BBDD.Designer.cs">
+      <DependentUpon>Form_BBDD.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Control_Usuarios.cs">
       <SubType>Form</SubType>
@@ -111,11 +111,11 @@
     <Compile Include="Form_Configuraciones.Designer.cs">
       <DependentUpon>Form_Configuraciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Entregas.cs">
+    <Compile Include="Form_Entrega.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Entregas.Designer.cs">
-      <DependentUpon>Form_Entregas.cs</DependentUpon>
+    <Compile Include="Form_Entrega.Designer.cs">
+      <DependentUpon>Form_Entrega.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Incidencia.cs">
       <SubType>Form</SubType>
@@ -161,8 +161,8 @@
     <Compile Include="v_home_ce.Designer.cs">
       <DependentUpon>v_home_ce.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form_bbdd.resx">
-      <DependentUpon>Form_bbdd.cs</DependentUpon>
+    <EmbeddedResource Include="Form_BBDD.resx">
+      <DependentUpon>Form_BBDD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Control_Usuarios.resx">
       <DependentUpon>Form_Control_Usuarios.cs</DependentUpon>
@@ -170,8 +170,8 @@
     <EmbeddedResource Include="Form_Configuraciones.resx">
       <DependentUpon>Form_Configuraciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Entregas.resx">
-      <DependentUpon>Form_Entregas.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Entrega.resx">
+      <DependentUpon>Form_Entrega.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Incidencia.resx">
       <DependentUpon>Form_Incidencia.cs</DependentUpon>
@@ -288,6 +288,11 @@
     <None Include="bin\Debug\iconos\caja.png" />
     <None Include="bin\Debug\iconos\caja-icon64.png" />
     <None Include="bin\Debug\iconos\mono.gif" />
+    <None Include="bin\Debug\iconos\nota.png" />
+    <None Include="bin\Debug\iconos\internet_24.png" />
+    <None Include="bin\Debug\iconos\grupo_32.png" />
+    <None Include="bin\Debug\iconos\internet_32.png" />
+    <None Include="bin\Debug\iconos\internet_64.png" />
     <Content Include="bin\Debug\img\fondo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

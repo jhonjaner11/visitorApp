@@ -26,6 +26,9 @@ namespace visitorApp
         private string perfil;
         private string[] user;
         private string id_user;
+        private bool in_panel;
+        private bool in_boton;
+        
 
         //string[] userIn meter en home ce 
         public v_home_ce()
@@ -38,8 +41,8 @@ namespace visitorApp
             int Width = screen.Bounds.Height;
             Console.WriteLine("heigth:" + Height + "  width:" + Width);
 
-            this.pnl_v_home_ce.Width = Width;
-            this.pnl_v_home_ce.Height = Height;
+            //this.pnl_v_home_ce.Width = Width;
+            //this.pnl_v_home_ce.Height = Height;
             //user = userIn;
             //perfil = user[3];
             //id_user = user[6];
@@ -55,10 +58,11 @@ namespace visitorApp
                 if (boton == eleccion)
                 {
                     boton.BackColor = Color.Black;
-                    boton.Enabled = false;
+                    //boton.Enabled = false;
+                   
                 }
                 else {
-                    boton.Enabled = true;
+                      boton.Enabled = true;
                     boton.BackColor = Color.Transparent;
                 }
             }
@@ -72,13 +76,17 @@ namespace visitorApp
                 Console.Write("Paneles a eliminar:");
                 Console.WriteLine(this.pnl_contenedor.Controls.Count);
                 this.pnl_contenedor.Controls.RemoveAt(0);
+                //this.pnl_contenedor.co
             }
             Form fh = formhija as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
+            //fh.Dock = DockStyle.Fill;
             this.pnl_contenedor.Controls.Add(fh);
             this.pnl_contenedor.Tag = fh;
+
             fh.Show();
+            
         }
 
         public void cargarComponentes(string perfil)
@@ -98,34 +106,15 @@ namespace visitorApp
             this.Close(); 
         }
 
-        private void btn_reg_visita_Click(object sender, EventArgs e)
-        {
-            cambiar_color_boton(btn_reg_visita);
-            AbrirFormHija(new Form_Visita(id_user));
-        }
 
-
-
-        private void btn_reg_incidente_Click(object sender, EventArgs e)
-        {
-            cambiar_color_boton(btn_reg_incidente);
-            AbrirFormHija(new Form_Incidencia(id_user));
-
-        }
 
         private void v_home_ce_Load(object sender, EventArgs e)
         {
-            btn_reg_visita.PerformClick();
+            btn_home.PerformClick();
 
         }
 
-        private void btn_exportar_Click_1(object sender, EventArgs e)
-        {
-            cambiar_color_boton(btn_exportar);
-            AbrirFormHija(new Form_bbdd());
 
-
-        }
 
         private void btn_Users_Click(object sender, EventArgs e)
         {
@@ -139,10 +128,39 @@ namespace visitorApp
             AbrirFormHija(new Form_Configuraciones());
         }
 
+        private void btn_visita_Click(object sender, EventArgs e)
+        {
+            cambiar_color_boton(btn_visita);
+            AbrirFormHija(new Form_Visita(id_user));
+        }
+
+        private void btn_incidencia_Click(object sender, EventArgs e)
+        {
+            cambiar_color_boton(btn_incidencia);
+            AbrirFormHija(new Form_Incidencia(id_user));
+        }
+
+        private void btn_exportar_Click(object sender, EventArgs e)
+        {
+            cambiar_color_boton(btn_exportar);
+            AbrirFormHija(new Form_BBDD());
+        }
+
         private void btn_entrega_Click(object sender, EventArgs e)
         {
             cambiar_color_boton(btn_entrega);
-            AbrirFormHija(new Form_Entregas());
+            AbrirFormHija(new Form_Entrega());
         }
+
+
+
+
+
+ 
+         
+
+
+
+        
     }
 }
